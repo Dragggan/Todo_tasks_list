@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import LogInPage from '../containers/logInPage/logInPage.js';
 
 class App extends React.Component {
     
@@ -8,6 +8,7 @@ class App extends React.Component {
     		return(
     			<div>
     				<h1>ToDoApp</h1>
+             <LogInPage />
     			</div>
 
     );
