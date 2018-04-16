@@ -1,8 +1,12 @@
 {
-  "name": "todo-app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "RadaIvanaDragan",
+"version": "1.0.0",
+ "description": "ourProject",
+ "main": "index.js",
+ "repository": "https://github.com/Dragggan/Todo_tasks_list.git",
+ "author": "RadaIvanaDragan",
+ "license": "MIT",
+ "private": false,
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
