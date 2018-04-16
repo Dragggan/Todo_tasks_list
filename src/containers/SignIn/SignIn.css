@@ -1,0 +1,11 @@
+body {
+  background-color: cornflowerblue;
+}
+
+.test {
+  padding: 20px;
+  margin: 40px;
+  border:solid thin red;
+}
+
+
