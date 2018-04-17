@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignIn from '../containers/SignIn/SignIn.js';
+import SignIn from '../containers/signIn/SignIn.js';
 import AddTask from '../containers/addTask'
 
 class App extends React.Component {
