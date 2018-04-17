@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-import SignIn from '../containers/SignIn/SignIn.js';
-import AddTask from '../containers/addTask'
+import { BrowserRouter as Router } from "react-router-dom";
 
-class App extends React.Component {
-    
-   
-    	render() {
-    		return(
-    			<div>
-    				<h1>ToDoApp</h1>
-             <div className="test">Testing login
-              <SignIn />
-             </div>
+import Main from '../components/main'
 
-             <AddTask />
-             
-    			</div>
+class App extends Component {
 
+  render() {
+    return (
+      <div>
+        <Router>
+        <div>
+            
+            <Main/>
+            
+          </div>
+        </Router>
+      </div>
+      
     );
-}
+  }
 }
 
 export default App;
+
