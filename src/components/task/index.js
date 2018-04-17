@@ -10,6 +10,7 @@ class ToDoItem extends Component{
          Id: {this.props.item.id}; Title: {this.props.item.title}; Completed: {this.props.item.completed? 'Yes ':'No '}
 
          <input type="submit"  value="Delete Task"/> {/*previdjeno dugme koje bi brisalo task, mozda ne moramo ovako da implementiramo brisanje taska*/}
+         <input type="submit"  value="Show Details"/>
             </div>)
 
     }
