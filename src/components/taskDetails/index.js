@@ -13,14 +13,14 @@ class TaskDetails extends Component {
   }
 
   render() {
-    if(this.props.showModal){
+    if(this.props.showDetails){
     return ReactDOM.createPortal(
       <div className='modal'>
         <div>id: 1</div>
-        <div>description: <input type="text" value={this.props.selectedTask.description}/></div>
+        <div>description: <input type="text" value="some description"/></div>
       
         <input type="submit" value="save changes"/>
-        <input type="submit" value="exit details" onClick={()=>this.props.hideModal()}/>
+        <input type="submit" value="exit details"/>
       </div>,
       this.modalRoot
     );
