@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SignIn from '../containers/logIn/logIn.js';
+ // import Main from '../components/main/index.js';
 
 class App extends React.Component {
     
@@ -9,6 +10,7 @@ class App extends React.Component {
     			<div>
     				<h1>ToDoApp</h1>
 					<SignIn/>
+					{/*<Main/>*/}
     			</div>
 
     );
