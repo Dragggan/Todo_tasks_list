@@ -4,3 +4,8 @@ export const chngList = list => (
     { type: "CHANGE_LIST",
      list: list }
     );
+
+export const chngUsers = list => (
+    { type: "CHANGE_USERS",
+     list: list }
+    );

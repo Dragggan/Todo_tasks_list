@@ -7,7 +7,7 @@ import { connect } from "react-redux"; //moramo da uvezemo ovo connect da bismo 
 
 import AddTask from '../addTask'
 import TaskList from '../../components/TaskList'
-import { chngList } from "../../actions"; //ova komponenta poziva Api, prima podatke, to znaci da menja state, zato moramo da uvezemo i akciju koja nam treba da bismo promenili state
+import { chngList, chngUsers } from "../../actions"; //ova komponenta poziva Api, prima podatke, to znaci da menja state, zato moramo da uvezemo i akciju koja nam treba da bismo promenili state
 
 
 //ova funkcija (koja je ugradjena, nismo joj mi dali ime) 
@@ -16,24 +16,25 @@ import { chngList } from "../../actions"; //ova komponenta poziva Api, prima pod
 //kada ovo uradimo ovo chngList levo od dve tacke postaje deo propsa nase komponente i mozemo da ga pozovemo bilo kad
 const mapDispatchToProps = dispatch => {
   return {
-    chngList: list => dispatch(chngList(list))
+    chngList: list => dispatch(chngList(list)),
+    chngUsers: list => dispatch(chngUsers(list))
   };
 };
-
-
-
-
 
 class ConnectedHome extends Component{
     constructor(props){
         super(props)
     }
 
-    setData(responseData){
-   
+    setToDoList(responseData){
     const toDoList=responseData.filter((item)=>item.userId=='1')//ovaj API vraca jako veliki json za todo listu, zato smo ovde filtrirali da vrati todo listu samo za jednog usera (na ovome cemo jos raditi)
     console.log(toDoList);
     this.props.chngList(toDoList); //ovde u sustini pozivamo akciju i prosledjujemo joj dobijene podatke iz Apija
+    }
+
+    setUsers(responseUsers){
+    console.log(responseUsers);
+    this.props.chngUsers(responseUsers); 
     }
 
 componentDidMount(){
@@ -44,7 +45,17 @@ componentDidMount(){
     });
 
     fetch(request).then(response=>
-      response.json()).then(responseData=>this.setData(responseData))
+      response.json()).then(responseData=>this.setToDoList(responseData))
+      .catch(function(error){console.log(error);})
+
+      const url2=new URL('https://jsonplaceholder.typicode.com/users')
+        const request2=new Request(url2,{
+        method:'GET',
+        mode:'cors'
+    });
+
+    fetch(request2).then(response=>
+      response.json()).then(responseData=>this.setUsers(responseData))
       .catch(function(error){console.log(error);})
                 
 }
