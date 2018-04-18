@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import SignIn from '../containers/signIn/SignIn.js';
 import AddTask from '../containers/addTask'
 
-class App extends React.Component {
+class App extends Component {
     
-   
+
+
     	render() {
     		return(
     			<div>

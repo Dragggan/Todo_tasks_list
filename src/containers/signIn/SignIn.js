@@ -13,15 +13,19 @@ class SignIn extends Component {
 
  signUp() {
 /* Validating email adress*/
-  var email = this.state.email;
+  const email = this.state.email;
   console.log(this.state.email);
-  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if(re.test(email)) {
    console.log("sve true");
+
   }
   else {
-   this.setState({mesage : "not a valid email"})
-   console.log(this.state.mesage);
+  /* this.setState({mesage : "not a valid email"})
+   console.log(this.state.mesage);*/
+  
+
+  
   }
 
  }
@@ -50,6 +54,7 @@ class SignIn extends Component {
     </div>
   );
  }
+
 }
 
 export default SignIn;
