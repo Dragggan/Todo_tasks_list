@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
-import {Route, NavLink, Switch, Router } from "react-router-dom";
+import {Route, NavLink, Switch, BrowserRouter  } from "react-router-dom";
 import Home from '../../containers/home';
-import './style.css';
 import LogIn from '../../containers/logIn/logIn.js';
+import './style.css';
+import { Provider, connect } from 'react-redux';
 
 class Main extends Component {
 
     render(){
-        return(
-        <Router>
+        return (
+
+        <BrowserRouter>
          <div id="main">
+
+         <NavLink to="/" >home</NavLink>
+         <NavLink to="/login" >LogIn</NavLink>
           <Switch>
-           <Route path="/" component={Home} />
-           <Route path="/login" component={LogIn} />
+           <Route exact  path="/" component={Home} />
+           <Route exact  path="/login" component={LogIn} />
           </Switch>
-         <NavLink to="/" component={Home}>proba</NavLink>
-         <NavLink to="/login" component={LogIn}>LogIn</NavLink>
+
          </div>
-        </Router>
+        </BrowserRouter>
+
     )
     }
 }
