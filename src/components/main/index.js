@@ -12,7 +12,6 @@ class Main extends Component {
 
         <BrowserRouter>
          <div id="main">
-
          <NavLink to="/" >home</NavLink>
          <NavLink to="/login" >LogIn</NavLink>
           <Switch>
