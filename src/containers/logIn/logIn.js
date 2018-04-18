@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import someCSS from './SignIn.css';
+import './logIn.css';
 
-class SignIn extends Component {
+class LogIn extends Component {
  constructor(props) {
   super(props);
   this.state = {
@@ -14,15 +14,16 @@ class SignIn extends Component {
  signUp() {
 /* Validating email adress*/
   const email = this.state.email;
-  console.log(this.state.email);
+  // console.log(this.state.email);
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if(re.test(email)) {
    console.log("sve true");
-
   }
   else {
-  /* this.setState({mesage : "not a valid email"})
-   console.log(this.state.mesage);*/
+   this.setState((prevState) => {
+    return console.log("aaaa"+ prevState);
+   });
+   console.log(this.state.mesage);
   
 
   
@@ -57,5 +58,5 @@ class SignIn extends Component {
 
 }
 
-export default SignIn;
+export default LogIn;
 
