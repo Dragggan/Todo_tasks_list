@@ -2,8 +2,33 @@
 
 import React, {Component} from 'react'
 import './style.css';
+import { connect } from "react-redux";
+import { chngList } from "../../actions";
 
-class ToDoItem extends Component{
+const mapDispatchToProps = dispatch => {
+  return {
+    chngList: list => dispatch(chngList(list)),
+  };
+};
+
+const mapStateToProps = state => {
+  return { toDoList: state.toDoList };
+};
+
+class ConnectedToDoItem extends Component{
+constructor(props){
+    super(props);
+
+    this.deleteTask=this.deleteTask.bind(this);
+}
+
+deleteTask(){
+    const isNotId=task=>task.id!==this.props.item.id;
+    const updatedList= this.props.toDoList.filter(isNotId)
+    this.props.chngList(updatedList);
+    console.log("ToDoItem#deleteTask")
+}
+
     render(){
         return(
             <div className="container">
@@ -13,7 +38,7 @@ class ToDoItem extends Component{
         <div id="title"> Title: {this.props.item.title} </div>
         <div id="completed"> Completed: {this.props.item.completed? 'Yes ':'No '} </div>
 </div>
-         <input type="submit"  value="Delete Task" className="btn" /> {/*previdjeno dugme koje bi brisalo task, mozda ne moramo ovako da implementiramo brisanje taska*/}
+         <input type="submit" onClick={this.deleteTask} value="Delete Task" className="btn" /> {/*previdjeno dugme koje bi brisalo task, mozda ne moramo ovako da implementiramo brisanje taska*/}
          <input type="submit"  value="Show Details" className="btn" />
            
            
@@ -24,5 +49,5 @@ class ToDoItem extends Component{
 
     }
 }
-
+const ToDoItem=connect(mapStateToProps,mapDispatchToProps)(ConnectedToDoItem)
 export default ToDoItem
