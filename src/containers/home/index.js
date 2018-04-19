@@ -63,8 +63,8 @@ componentDidMount(){
     render(){
         return ( 
             <div>
-                <TaskList/>
                 <AddTask/>
+                <TaskList/>
             </div>
             )
     }

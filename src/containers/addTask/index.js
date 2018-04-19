@@ -1,4 +1,5 @@
 import React, { Component }  from 'react';
+import './style.css';
 
 
 class AddTask extends Component {
@@ -39,9 +40,9 @@ class AddTask extends Component {
       <div>
           <form onSubmit={this.addTask}>
             <input ref={(a) => this.inputTask = a}
-              placeholder="please enter your task">
+              placeholder="please enter your task" className="todo-input" >
             </input>
-            <button type="submit">Add to Task List</button>
+            <button type="submit" className="todo-add" >Add to Task List</button>
           </form>
           <div>
         <ToDoList task={this.state.tasks} />
