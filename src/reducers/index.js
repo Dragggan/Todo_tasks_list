@@ -13,10 +13,21 @@ const rootReducer = (state = initialState, action) => {
     case "CHANGE_USER":
       return Object.assign({},state, {users:action.list});
     
+    case "ADD_TASK":
+      return Object.assign({},state, {
+
+      toDoList:[
+	  ...state.toDoList,
+	  action.task
+      ]
+  	}
+  )
+
     default:
       return state;
 
 }
   
 };
+
 export default rootReducer;

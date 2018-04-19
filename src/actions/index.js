@@ -9,3 +9,8 @@ export const chngUsers = list => (
     { type: "CHANGE_USERS",
      list: list }
     );
+
+export const addTask = task => (
+	{ type:"ADD_TASK",
+  	task: task}
+	);

@@ -1,14 +1,18 @@
 import React, { Component }  from 'react';
 import './style.css';
+import {addTask} from "../../actions"
+import { connect } from "react-redux";
 
+const mapDispatchToProps = dispatch => {
+  return {
+    addTask: task => dispatch(addTask(task)),
+  
+  };
+};
 
-class AddTask extends Component {
+class ConnectedAddTask extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      tasks: []
-    };
 
     this.addTask = this.addTask.bind(this);
 
@@ -18,21 +22,19 @@ class AddTask extends Component {
 
     if (this.inputTask.value !== '') {
       var taskArray={
-        text: this.inputTask.value,
-        id: []
+        userId: 5,
+        title: this.inputTask.value,
+        id: 21,
+        completed: false
       };
-
-      this.setState((prevState) => {
-      return { 
-        tasks: prevState.tasks.concat(taskArray) 
-      };
-    });
 
       this.inputTask.value = '';
     }
     console.log(taskArray);
 
     e.preventDefault();
+
+    this.props.addTask(taskArray);
   }
 
   render() {
@@ -44,30 +46,12 @@ class AddTask extends Component {
             </input>
             <button type="submit" className="todo-add" >Add to Task List</button>
           </form>
-          <div>
-        <ToDoList task={this.state.tasks} />
-        </div>
       </div>
     );
   }
 }
+
+const AddTask=connect(null,mapDispatchToProps)(ConnectedAddTask)
 export default AddTask;
 
-class ToDoList extends Component{
-
-createTasks(task) {
-    return <li id={task.id}>{task.text}</li>
-  }
-
-  render() {
-    var task = this.props.task;
-    var listItems = task.map(this.createTasks);
- 
-    return (
-      <ul>
-          {listItems}
-      </ul>
-    );
-  }
-};
 
