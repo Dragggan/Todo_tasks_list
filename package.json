@@ -29,7 +29,7 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --module-bind js=babel-loader --module-bind css=style-loader!css-loader --content-base dist/"
+    "start": "webpack-dev-server --mode development --module-bind js=babel-loader --module-bind css=style-loader!css-loader --content-base dist"
   },
   "dependencies": {
     "babel-preset-env": "^1.6.1",

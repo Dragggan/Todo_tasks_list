@@ -35,12 +35,15 @@ class LogIn extends Component {
   return (
     <div className="form-inline">
      <h2 style={{color: 'red'}}>Sign In </h2>
+     <hr />
      <div className="form-group">
       <input className="form-control"
              type="text"
-             placeholder="email"
+
              onChange={(event) => this.setState({email: event.target.value})}
       />
+      <label>email</label>
+
       <input className="form-control"
              type="password"
              placeholder="password"
