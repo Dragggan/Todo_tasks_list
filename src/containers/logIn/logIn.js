@@ -20,8 +20,8 @@ class LogIn extends Component {
    console.log("sve true");
   }
   else {
-   this.setState((prevState) => {
-    return console.log("aaaa"+ prevState);
+   this.setState((prevProps) => {
+    return console.log("aaaa"+ prevProps);
    });
    console.log(this.state.mesage);
   

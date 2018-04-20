@@ -1,3 +1,39 @@
 body {
-  background-color: white;
+  background-color: gray;
+}
+ * {
+   box-sizing: border-box;
+ }
+input.form-control {
+  display: inherit;
+  background: none;
+  color: coral;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+  overflow: visible;
+  -webkit-appearance: textfield;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+
+  text-align: start;
+  margin: 0em;
+
+}
+div.form-inline {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  top: 30%;
+
 }
