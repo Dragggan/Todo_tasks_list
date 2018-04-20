@@ -9,6 +9,9 @@ const mapDispatchToProps = dispatch => {
   
   };
 };
+const mapStateToProps = state => {
+  return { toDoList: state.toDoList };
+};
 
 class ConnectedAddTask extends Component {
   constructor(props) {
@@ -21,10 +24,11 @@ class ConnectedAddTask extends Component {
   addTask(e) {
 
     if (this.inputTask.value !== '') {
+      var id=this.props.toDoList.length+1;
       var taskArray={
         userId: 5,
         title: this.inputTask.value,
-        id: 21,
+        id: id,
         completed: false
       };
 
@@ -51,7 +55,7 @@ class ConnectedAddTask extends Component {
   }
 }
 
-const AddTask=connect(null,mapDispatchToProps)(ConnectedAddTask)
+const AddTask=connect(mapStateToProps,mapDispatchToProps)(ConnectedAddTask)
 export default AddTask;
 
 
