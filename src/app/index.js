@@ -9,8 +9,8 @@ class App extends React.Component {
     	render() {
     		return(
     			<div>
-					<LogIn/>
-                {/*<Main/>*/}
+					{/*<LogIn/>*/}
+                <Main/>
 
     			</div>
 
