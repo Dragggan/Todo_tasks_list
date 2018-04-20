@@ -24,38 +24,48 @@ class LogIn extends Component {
     return console.log("aaaa"+ prevProps);
    });
    console.log(this.state.mesage);
-  
 
-  
+
+
   }
 
  }
 
  render() {
   return (
-    <div className="form-inline">
-     <h2 style={{color: 'red'}}>Sign In </h2>
-     <hr />
-     <div className="form-group">
-      <input className="form-control"
-             type="text"
+  <form>
+     <h2>Sign In</h2>
 
+     <div className="group">
+      <input
+             type="text"
+             required="required"
              onChange={(event) => this.setState({email: event.target.value})}
       />
-      <label>email</label>
-
-      <input className="form-control"
-             type="password"
-             placeholder="password"
-             onChange={(event) => this.setState({password: event.target.value})}
-      />
-      <input type="button"
-             value="Sign In"
-             onClick={() => this.signUp()}
-
-      />
+      <span className="highlight"></span>
+      <span className="bar"></span>
+      <label>Email</label>
      </div>
-    </div>
+
+   <div className="group">
+    <input
+      type="password"
+      required="required"
+      onChange={(event) => this.setState({password: event.target.value})}
+    />
+    <span className="highlight"></span>
+    <span className="bar"></span>
+    <label>password</label>
+   </div>
+
+
+      <div className="btn-box">
+       <button className="btn btn-submit"
+               type="submit"
+               onClick={() => this.signUp()}>LogIn</button>
+      </div>
+  </form>
+
   );
  }
 
