@@ -21,7 +21,7 @@ class ConnectedTaskList extends Component{
         return (
              <div>
             <h1 id="todolist"> To do List:</h1>
-            <div><TaskDetails showDetails={false}/>
+            <div>
             {this.props.toDoList.map((item)=><Task item={item} key={item.id}/>)}
             </div>
             </div>

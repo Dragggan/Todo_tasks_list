@@ -4,23 +4,70 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+
+import { connect } from "react-redux";
+import { chngList } from "../../actions";
 import './style.css';
 
-class TaskDetails extends Component {
+const mapDispatchToProps = dispatch => {
+  return {
+    chngList: list => dispatch(chngList(list)),
+  };
+};
+
+const mapStateToProps = state => {
+  return { toDoList: state.toDoList };
+};
+
+class ConnectedTaskDetails extends Component {
   constructor(props) {
     super(props);
+    this.exitDetails=this.exitDetails.bind(this);
+    this.saveChanges=this.saveChanges.bind(this);
     this.modalRoot = document.getElementById('modal-root');
+  }
+
+  saveChanges(e){
+    if (this.inputTask.value !== '') {
+      var changedDescription=this.inputTask.value;
+   
+      const updatedList=this.props.toDoList.map(item=>{
+    if(item.id==this.props.task.id){
+      return Object.assign({},item,{title:changedDescription})
+    }
+    return item
+  });
+  this.props.chngList(updatedList);
+    
+
+    e.preventDefault();
+
+    
+  }
+  }
+
+
+  exitDetails(e){
+    e.preventDefault();
+    console.log("exitDetails#TaskDetails");
+    const updatedList=this.props.toDoList.map(item=>{
+    if(item.id==this.props.task.id){
+      return Object.assign({},item,{showDetails:false})
+    }
+    return item
+  });
+  this.props.chngList(updatedList);
   }
 
   render() {
     if(this.props.showDetails){
     return ReactDOM.createPortal(
       <div className='modal'>
-        <div>id: 1</div>
-        <div>description: <input type="text" value="some description"/></div>
+        <div>id: {this.props.task.id}</div>
+        <div>description: <input type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
       
-        <input type="submit" value="save changes"/>
-        <input type="submit" value="exit details"/>
+        <button onClick={this.saveChanges}>save changes </button>
+        <button onClick={this.exitDetails}>exit details</button>
       </div>,
       this.modalRoot
     );
@@ -28,5 +75,5 @@ class TaskDetails extends Component {
   return null
   }
 }
-
+const TaskDetails=connect(mapStateToProps,mapDispatchToProps)(ConnectedTaskDetails)
 export default TaskDetails;
