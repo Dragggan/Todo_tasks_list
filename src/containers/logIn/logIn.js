@@ -3,17 +3,30 @@ import {
   Redirect,
 } from "react-router-dom";
 
+import { connect } from "react-redux";
+import { isAuth } from "../../actions";
+
 import './css.css';
 import auth from '../../components/auth'
 
-class LogIn extends Component {
+const mapDispatchToProps = dispatch => {
+  return {
+    isAuth: flag => dispatch(isAuth(flag)),
+  };
+};
+
+const mapStateToProps = state => {
+  return { auth: state.auth };
+};
+
+class ConnectedLogIn extends Component {
  constructor(props) {
   super(props);
   this.state = {
    email: '',
    password: '',
    mesage: '',
-   redirectToReferrer:false,
+  
   }
  }
 
@@ -33,17 +46,15 @@ class LogIn extends Component {
 
 //   }
 
-auth.authenticate(()=>{
-            this.setState({redirectToReferrer:true})
-        });
+this.props.isAuth(true);
 
  }
 
  render() {
 
-  const { redirectToReferrer } = this.state;
+  
 
-            if (redirectToReferrer){
+            if (this.props.auth.isAuthenticated){
                 return <Redirect to={{
                     pathname:'/',
                 }}
@@ -88,5 +99,6 @@ auth.authenticate(()=>{
 
 }
 
+const LogIn=connect(mapStateToProps,mapDispatchToProps)(ConnectedLogIn)
 export default LogIn;
 

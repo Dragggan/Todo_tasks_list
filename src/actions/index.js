@@ -15,4 +15,8 @@ export const addTask = task => (
   	task: task}
 	);
 
+export const isAuth=flag=>(
+    {type:"IS_AUTH",
+    flag:flag}
+    )
 

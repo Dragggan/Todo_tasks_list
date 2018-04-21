@@ -5,11 +5,14 @@ import {
 } from "react-router-dom";
 
 import auth from '../auth'
+import { connect } from "react-redux";
 
 
+const mapStateToProps = state => {
+  return { auth: state.auth };
+};
 
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
+const ConnectedPrivateRoute = ({ component: Component,auth, ...rest,}) => (
   <Route {...rest} render={props =>auth.isAuthenticated ? (
         <Component {...props} />
       ) : (
@@ -24,4 +27,5 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   />
 );
 
+const PrivateRoute=connect(mapStateToProps)(ConnectedPrivateRoute)
 export default PrivateRoute
