@@ -10,9 +10,9 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-preset-react": "^6.24.1",
     "babel-preset-env": "^1.5.1",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
@@ -29,10 +29,11 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --module-bind js=babel-loader --module-bind css=style-loader!css-loader --content-base dist"
+    "start": "webpack-dev-server --mode development  --module-bind js=babel-loader --module-bind css=style-loader!css-loader --content-base dist"
   },
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "history": "^4.7.2",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   }
