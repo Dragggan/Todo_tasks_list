@@ -22,15 +22,13 @@ class ConnectedAddTask extends Component {
   }
 
   addTask(e) {
-
     if (this.inputTask.value !== '') {
       var id=this.props.toDoList.length+1;
       var taskArray={
-        userId: 5,
         title: this.inputTask.value,
         id: id,
         completed: false,
-        assegnee: document.getElementById("assegnee").value
+        userId: document.getElementById("assignee").value
       };
 
       this.inputTask.value = '';
@@ -49,7 +47,7 @@ class ConnectedAddTask extends Component {
             <input ref={(a) => this.inputTask = a}
               placeholder="please enter your task" className="todo-input" >
             </input>
-            <select id="assegnee"> 
+            <select id="assignee"> 
    <option>Djuza</option>
    <option>Ivana</option>
    <option>Rada</option>

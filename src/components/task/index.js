@@ -53,7 +53,7 @@ showDetails(){
         <div id="id"> Id: {this.props.item.id} </div>
         <div id="title"> Title: {this.props.item.title} </div>
         <div id="completed"> Completed: {this.props.item.completed? 'Yes ':'No '} </div>
-        <div id="assignee">Assignee:{this.props.item.userId}</div>
+        <div id="assignee">Assignee: {this.props.item.userId}</div>
 </div>
          <input type="submit" onClick={this.deleteTask} value="Delete Task" className="btn" /> {/*previdjeno dugme koje bi brisalo task, mozda ne moramo ovako da implementiramo brisanje taska*/}
          <input type="submit"  value="Show Details" className="btn" onClick={this.showDetails}/>
