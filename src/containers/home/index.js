@@ -7,7 +7,7 @@ import { connect } from "react-redux"; //moramo da uvezemo ovo connect da bismo 
 
 import AddTask from '../addTask'
 import TaskList from '../../components/TaskList'
-import { chngList, chngUsers } from "../../actions"; //ova komponenta poziva Api, prima podatke, to znaci da menja state, zato moramo da uvezemo i akciju koja nam treba da bismo promenili state
+import { chngList, chngUsers,chngId } from "../../actions"; //ova komponenta poziva Api, prima podatke, to znaci da menja state, zato moramo da uvezemo i akciju koja nam treba da bismo promenili state
 
 
 //ova funkcija (koja je ugradjena, nismo joj mi dali ime) 
@@ -17,8 +17,16 @@ import { chngList, chngUsers } from "../../actions"; //ova komponenta poziva Api
 const mapDispatchToProps = dispatch => {
   return {
     chngList: list => dispatch(chngList(list)),
-    chngUsers: list => dispatch(chngUsers(list))
+    chngId: id => dispatch(chngId(id)),
+    chngUsers: list => dispatch(chngUsers(list)),
+    
   };
+};
+
+const mapStateToProps = state => {
+  return { idCounter: state.idCounter,
+            toDoList:state.toDoList,
+            users:state.users};
 };
 
 class ConnectedHome extends Component{
@@ -29,15 +37,20 @@ class ConnectedHome extends Component{
     setToDoList(responseData){
     const toDoList=responseData.filter((item)=>item.userId=='1')//ovaj API vraca jako veliki json za todo listu, zato smo ovde filtrirali da vrati todo listu samo za jednog usera (na ovome cemo jos raditi)
     console.log(toDoList);
+    const idLength=toDoList.length;
+    console.log(idLength);
     this.props.chngList(toDoList); //ovde u sustini pozivamo akciju i prosledjujemo joj dobijene podatke iz Apija
+    this.props.chngId(idLength);
     }
 
     setUsers(responseUsers){
     console.log(responseUsers);
     this.props.chngUsers(responseUsers); 
+
     }
 
 componentDidMount(){
+    if(!this.props.toDoList.length>0){
         const url=new URL('https://jsonplaceholder.typicode.com/todos')
         const request=new Request(url,{
         method:'GET',
@@ -47,7 +60,8 @@ componentDidMount(){
     fetch(request).then(response=>
       response.json()).then(responseData=>this.setToDoList(responseData))
       .catch(function(error){console.log(error);})
-
+  }
+    if(!this.props.users.length>0){
       const url2=new URL('https://jsonplaceholder.typicode.com/users')
         const request2=new Request(url2,{
         method:'GET',
@@ -57,6 +71,7 @@ componentDidMount(){
     fetch(request2).then(response=>
       response.json()).then(responseData=>this.setUsers(responseData))
       .catch(function(error){console.log(error);})
+  }
                 
 }
 
@@ -71,5 +86,5 @@ componentDidMount(){
 }
 
 
-const Home=connect(null,mapDispatchToProps)(ConnectedHome) //ovde moramo da povezemo nasu komponentu sa funkcijom madDispatchToProps da bi komponenta bila povezana sa globalnim store-om
+const Home=connect(mapStateToProps,mapDispatchToProps)(ConnectedHome) //ovde moramo da povezemo nasu komponentu sa funkcijom madDispatchToProps da bi komponenta bila povezana sa globalnim store-om
 export default Home

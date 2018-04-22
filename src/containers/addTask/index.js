@@ -1,16 +1,17 @@
 import React, { Component }  from 'react';
 import './style.css';
-import {addTask} from "../../actions"
+import {addTask, chngId} from "../../actions"
 import { connect } from "react-redux";
 
 const mapDispatchToProps = dispatch => {
   return {
     addTask: task => dispatch(addTask(task)),
-  
+    chngId: id => dispatch(chngId(id)),
   };
 };
 const mapStateToProps = state => {
-  return { toDoList: state.toDoList };
+  return { toDoList: state.toDoList,
+            idCounter: state.idCounter };
 };
 
 class ConnectedAddTask extends Component {
@@ -23,7 +24,7 @@ class ConnectedAddTask extends Component {
 
   addTask(e) {
     if (this.inputTask.value !== '') {
-      var id=this.props.toDoList.length+1;
+      var id=this.props.idCounter+1;
       var taskArray={
         title: this.inputTask.value,
         id: id,
@@ -32,12 +33,14 @@ class ConnectedAddTask extends Component {
       };
 
       this.inputTask.value = '';
+      this.props.addTask(taskArray);
+      this.props.chngId(id);
     }
-    console.log(taskArray);
+   
 
     e.preventDefault();
 
-    this.props.addTask(taskArray);
+    
   }
 
   render() {

@@ -1,7 +1,9 @@
 //reduceri su funkcije koje menjaju state tako sto od akcije dobija podatak i uputsvo sta s njim treba da se uradi
 
 const initialState = {
+  idCounter:0,
   toDoList: [],
+  users:[],
   auth : {
   isAuthenticated: false,
   authenticate(cb) {
@@ -47,6 +49,9 @@ const rootReducer = (state = initialState, action) => {
 
     case "IS_AUTH":
     return Object.assign({},state, {auth:{isAuthenticated:action.flag}});
+
+    case "CHANGE_ID":
+    return Object.assign({},state, {idCounter:action.id});
 
 
     default:

@@ -78,7 +78,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module parse failed: Unexpected token (9:2)\\nYou may need an appropriate loader to handle this file type.\\n| ReactDOM.render(\\r\\n| \\r\\n|   <Provider store={store}>\\r\\n|    <App/>\\r\\n|   </Provider>\\r\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("throw new Error(\"Module parse failed: Unexpected token (11:2)\\nYou may need an appropriate loader to handle this file type.\\n| \\r\\n| \\r\\n|   <Provider store={store}>\\r\\n|    <App/>\\r\\n|   </Provider>\\r\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbXSwibWFwcGluZ3MiOiIiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ })
 

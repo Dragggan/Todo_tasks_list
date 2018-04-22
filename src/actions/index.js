@@ -20,3 +20,8 @@ export const isAuth=flag=>(
     flag:flag}
     )
 
+export const chngId=id=>(
+    {type:"CHANGE_ID",
+    id:id}
+    )
+
