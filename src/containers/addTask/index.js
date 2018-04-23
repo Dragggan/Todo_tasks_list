@@ -53,9 +53,13 @@ class ConnectedAddTask extends Component {
             <input ref={(a) => this.inputTask = a}
               placeholder="please enter your task" className="todo-input" >
             </input>
-            <div>
-
-            </div>
+            
+            <select id="assignee">
+           
+              {this.props.users.map((user)=><option key={user.id}>{user.username}</option>)}
+    
+            </select>
+           
             <button type="submit" className="todo-add" >Add to Task List</button>
           </form>
       </div>
