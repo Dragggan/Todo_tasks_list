@@ -12,12 +12,12 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => {
-<<<<<<< HEAD
+
  return {auth: state.auth};
-=======
+
   return { auth: state.auth,
             admins:state.admins };
->>>>>>> 806a9a3d17529c0f4b667f4db2e4c846fbea66f6
+
 };
 
 class ConnectedLogIn extends Component {
@@ -31,7 +31,7 @@ class ConnectedLogIn extends Component {
   }
  }
 
-<<<<<<< HEAD
+
  signUp() {
   /* Validating email adress*/
   const email = this.state.email;
@@ -42,7 +42,7 @@ class ConnectedLogIn extends Component {
   }
   else {
    console.log("ko");
-=======
+
  signUp(e) {
 
 // /* Validating email adress*/
@@ -67,7 +67,7 @@ for (var i=0;i<this.props.admins.length;i++){
     return;
   }
 }
->>>>>>> 806a9a3d17529c0f4b667f4db2e4c846fbea66f6
+
 
   }
  }
@@ -104,7 +104,7 @@ for (var i=0;i<this.props.admins.length;i++){
       <label>password</label>
      </div>
 
-<<<<<<< HEAD
+
      <div className="btn-box">
       <button className="btn btn-submit"
               type="submit"
@@ -112,14 +112,14 @@ for (var i=0;i<this.props.admins.length;i++){
       </button>
      </div>
     </form>
-=======
+
       <div className="btn-box">
        <button className="btn btn-submit"
                type="button"
                onClick={() => this.signUp()}>LogIn</button>
       </div>
   </form>
->>>>>>> 806a9a3d17529c0f4b667f4db2e4c846fbea66f6
+
 
   );
  }
