@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => {
-  return { auth: state.auth };
+  return { auth: state.auth,
+            admins:state.admins };
 };
 
 class ConnectedLogIn extends Component {
@@ -30,7 +31,8 @@ class ConnectedLogIn extends Component {
   }
  }
 
- signUp() {
+ signUp(e) {
+
 // /* Validating email adress*/
 //   const email = this.state.email;
 //   // console.log(this.state.email);
@@ -46,7 +48,13 @@ class ConnectedLogIn extends Component {
 
 //   }
 
-this.props.isAuth(true);
+
+for (var i=0;i<this.props.admins.length;i++){
+  if (this.props.admins[i].email==this.state.email && this.props.admins[i].password==this.state.password){
+    this.props.isAuth(true);
+    return;
+  }
+}
 
  }
 
@@ -89,7 +97,7 @@ this.props.isAuth(true);
 
       <div className="btn-box">
        <button className="btn btn-submit"
-               type="submit"
+               type="button"
                onClick={() => this.signUp()}>LogIn</button>
       </div>
   </form>
