@@ -1,0 +1,11 @@
+footer {
+    height:40px;
+    margin-top:20px;
+    border-top: 1px dotted #92b3e8;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    font-family: "Gill Sans", system-ui;
+}
