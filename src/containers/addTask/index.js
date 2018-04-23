@@ -11,7 +11,9 @@ const mapDispatchToProps = dispatch => {
 };
 const mapStateToProps = state => {
   return { toDoList: state.toDoList,
-            idCounter: state.idCounter };
+            idCounter: state.idCounter, 
+            users: state.users
+          };
 };
 
 class ConnectedAddTask extends Component {
@@ -31,7 +33,8 @@ class ConnectedAddTask extends Component {
         completed: false,
         userId: document.getElementById("assignee").value
       };
-
+      var users=this.props.users;
+      console.log(users)
       this.inputTask.value = '';
       this.props.addTask(taskArray);
       this.props.chngId(id);
@@ -50,11 +53,9 @@ class ConnectedAddTask extends Component {
             <input ref={(a) => this.inputTask = a}
               placeholder="please enter your task" className="todo-input" >
             </input>
-            <select id="assignee"> 
-   <option>Djuza</option>
-   <option>Ivana</option>
-   <option>Rada</option>
-</select> 
+            <div>
+
+            </div>
             <button type="submit" className="todo-add" >Add to Task List</button>
           </form>
       </div>
