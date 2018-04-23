@@ -35,7 +35,7 @@ const rootReducer = (state = initialState, action) => {
     case "CHANGE_LIST":
       return Object.assign({},state, {toDoList:action.list});
       
-    case "CHANGE_USER":
+    case "CHANGE_USERS":
       return Object.assign({},state, {users:action.list});
     
     case "ADD_TASK":

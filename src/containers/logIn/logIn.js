@@ -12,7 +12,12 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => {
+<<<<<<< HEAD
  return {auth: state.auth};
+=======
+  return { auth: state.auth,
+            admins:state.admins };
+>>>>>>> 806a9a3d17529c0f4b667f4db2e4c846fbea66f6
 };
 
 class ConnectedLogIn extends Component {
@@ -26,6 +31,7 @@ class ConnectedLogIn extends Component {
   }
  }
 
+<<<<<<< HEAD
  signUp() {
   /* Validating email adress*/
   const email = this.state.email;
@@ -36,6 +42,32 @@ class ConnectedLogIn extends Component {
   }
   else {
    console.log("ko");
+=======
+ signUp(e) {
+
+// /* Validating email adress*/
+//   const email = this.state.email;
+//   // console.log(this.state.email);
+//   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//   if(re.test(email)) {
+//    console.log("sve true");
+//   }
+//   else {
+//    this.setState((prevProps) => {
+//     return console.log("aaaa"+ prevProps);
+//    });
+//    console.log(this.state.mesage);
+
+//   }
+
+
+for (var i=0;i<this.props.admins.length;i++){
+  if (this.props.admins[i].email==this.state.email && this.props.admins[i].password==this.state.password){
+    this.props.isAuth(true);
+    return;
+  }
+}
+>>>>>>> 806a9a3d17529c0f4b667f4db2e4c846fbea66f6
 
   }
  }
@@ -72,6 +104,7 @@ class ConnectedLogIn extends Component {
       <label>password</label>
      </div>
 
+<<<<<<< HEAD
      <div className="btn-box">
       <button className="btn btn-submit"
               type="submit"
@@ -79,6 +112,14 @@ class ConnectedLogIn extends Component {
       </button>
      </div>
     </form>
+=======
+      <div className="btn-box">
+       <button className="btn btn-submit"
+               type="button"
+               onClick={() => this.signUp()}>LogIn</button>
+      </div>
+  </form>
+>>>>>>> 806a9a3d17529c0f4b667f4db2e4c846fbea66f6
 
   );
  }
