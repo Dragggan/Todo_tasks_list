@@ -10,21 +10,15 @@ class Main extends Component {
 
     render(){
         return (
-
-        
+          <BrowserRouter>
          <div id="main">
-         <NavLink to="/" >home</NavLink>
-         <NavLink to="/login" >LogIn</NavLink>
           <Switch>
            <PrivateRoute exact  path="/" component={Home} />
            <Route exact  path="/login" component={LogIn} />
           </Switch>
-
          </div>
-        
-
+          </BrowserRouter>
     )
     }
 }
-
 export default Main;
