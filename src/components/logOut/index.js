@@ -1,15 +1,38 @@
-import React from 'react-dom';
-import './style.css';
-import {Route, Redirect} from "react-router-dom";
+import React, { Component } from 'react';
+import {
+  withRouter
+} from "react-router-dom";
 
-const LogOut = () => {
-        return (
-            <div>
-             <input type= "button"
-               value="kliikkk"
-               className="bordered"
-               onClick={console.log("logedOut")} />
-            </div>
-        );
+import { connect } from "react-redux";
+import { isAuth } from "../../actions";
+
+const mapDispatchToProps = dispatch => {
+  return {
+    isAuth: flag => dispatch(isAuth(flag))
+  };
 };
-export default LogOut;
+
+const mapStateToProps = state => {
+  return { auth: state.auth };
+};
+
+const ConnectedLogOut = withRouter(
+
+    ({history,...props})=>props.auth.isAuthenticated ? (
+        <div>
+        <button  
+        onClick={()=>{
+            props.isAuth(false);
+            history.push("/login")}}>SignOut</button>
+        </div>
+        ):
+    null
+    
+    
+
+);
+    
+
+const LogOut =connect(mapStateToProps,mapDispatchToProps)(ConnectedLogOut)
+export default withRouter(LogOut);
+
