@@ -77,7 +77,8 @@ class ConnectedTaskDetails extends Component {
               {this.props.users.map((user)=><option key={user.id}>{user.name}</option>)}
     
             </select></div>
-            Completed:<input type="checkbox" ref={(a) => this.completedTask = a}/>
+            
+            <div className="inline-field">Completed:<input type="checkbox" id="taskCheck" ref={(a) => this.completedTask = a}/></div>
         <input className="btn" type="submit" value="save changes" onClick={this.saveChanges}/>
         <input className="btn" type ="submit" value ="exit details" onClick={this.exitDetails}/>
       </div>,

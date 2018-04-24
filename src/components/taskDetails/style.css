@@ -12,6 +12,7 @@
     right:5%;
     height:90%;
     z-index: 5;
+
 }
 #description{
 background: none;
@@ -39,4 +40,14 @@ background: none;
   width: 150px;
 
   position: relative;
+}
+
+
+
+
+.inline-field input,
+.inline-field label {
+  display: inline-block;
+  margin-bottom: 0; 
+  vertical-align: middle; 
 }
