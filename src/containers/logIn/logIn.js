@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
 
- return {auth: state.auth};
+ 
 
  return { auth: state.auth,
   admins:state.admins };
@@ -40,22 +40,21 @@ class ConnectedLogIn extends Component {
 
   const email = this.state.email;
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if(re.test(email)) {
-   console.log("sve true");
-   this.props.isAuth(true);
-  }
-  else {
-   console.log("not valid email");
+ 
+   
    for (var i=0;i<this.props.admins.length;i++){
-    if (this.props.admins[i].email==this.state.email && this.props.admins[i].password==this.state.password){
+    if (this.props.admins[i].email==this.state.email && re.test(email) && this.props.admins[i].password==this.state.password){
      this.props.isAuth(true);
      return;
     }
+    console.log("not valid email");
+     this.inputPass.value = '';
+      this.inputEmail.value = '';
    }
 
 
   }
- }
+ 
 
  render() {
   if(this.props.auth.isAuthenticated) {
@@ -69,6 +68,7 @@ class ConnectedLogIn extends Component {
      <h2>Sign In</h2>
      <div className="group">
       <input
+      ref={(a) => this.inputEmail = a}
         type="text"
         required="required"
         onChange={(event) => this.setState({email: event.target.value})}
@@ -79,7 +79,7 @@ class ConnectedLogIn extends Component {
      </div>
      <div className="group">
       <input
-
+        ref={(a) => this.inputPass = a}
         type="password"
         required="required"
         onChange={(event) => this.setState({password: event.target.value})}

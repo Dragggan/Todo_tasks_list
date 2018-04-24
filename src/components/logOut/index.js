@@ -1,6 +1,6 @@
 import React from 'react-dom';
 import './style.css';
- import {Route, Redirect} from "react-router-dom";
+import {Route, Redirect} from "react-router-dom";
 
 const LogOut = () => {
         return (
