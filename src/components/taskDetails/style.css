@@ -1,6 +1,6 @@
 .modal {
     background-color: #FFFF99;
-    
+    font-family: "Gill Sans", system-ui;
     padding: 0.5em;
     height: 60%;
     text-align: center;
@@ -12,4 +12,31 @@
     right:5%;
     height:90%;
     z-index: 5;
+}
+#description{
+background: none;
+  color: red;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: inherit;
+  width: 80%;
+  
+  border-radius: 0;
+  border: 1px solid #c6c6c6;
+}
+
+.btn {
+    padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  margin-right: 0px;
+  background-color: #66CDAA;
+  color: #FFF;
+  border: 2px solid #66CDAA;
+  cursor: pointer;
+
+  height: 50px;
+  width: 150px;
+
+  position: relative;
 }

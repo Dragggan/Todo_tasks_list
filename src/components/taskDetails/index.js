@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => {
 };
 
 const mapStateToProps = state => {
-  return { toDoList: state.toDoList };
+  return { toDoList: state.toDoList,
+            users: state.users };
 };
 
 class ConnectedTaskDetails extends Component {
@@ -30,10 +31,13 @@ class ConnectedTaskDetails extends Component {
   saveChanges(e){
     if (this.inputTask.value !== '') {
       var changedDescription=this.inputTask.value;
+      var changedUser=this.selectedUser.value;
+      var changedUserId=this.props.users.filter(user=>user.name==changedUser)[0].id;
    
       const updatedList=this.props.toDoList.map(item=>{
     if(item.id==this.props.task.id){
-      return Object.assign({},item,{title:changedDescription})
+      return Object.assign({},item,{title:changedDescription,
+                                    userId:changedUserId})
     }
     return item
   });
@@ -61,13 +65,19 @@ class ConnectedTaskDetails extends Component {
 
   render() {
     if(this.props.showDetails){
+      const requestedUser=this.props.users.filter(user=>user.id==this.props.task.userId)[0]
+      console.log(requestedUser)
     return ReactDOM.createPortal(
       <div className='modal'>
         <div>id: {this.props.task.id}</div>
-        <div>description: <input type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
-      
-        <button onClick={this.saveChanges}>save changes </button>
-        <button onClick={this.exitDetails}>exit details</button>
+        <div> <input id ="description" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
+        <div> Assignee: <select id="assignee" selected={requestedUser.name} ref={(a) => this.selectedUser = a}>
+           
+              {this.props.users.map((user)=><option key={user.id}>{user.name}</option>)}
+    
+            </select></div>
+        <input className="btn" type="submit" value="save changes" onClick={this.saveChanges}/>
+        <input className="btn" type ="submit" value ="exit details" onClick={this.exitDetails}/>
       </div>,
       this.modalRoot
     );
