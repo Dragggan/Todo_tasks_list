@@ -9,7 +9,7 @@
 import React, {Component} from 'react'
 import { connect } from "react-redux"; //moramo da uvezemo ovo connect da bismo se spojili sa
 // store-om
-import LogOut from '../../components/logOut/index.js';
+//import LogOut from '../../components/logOut/index.js';
 import AddTask from '../addTask'
 import TaskList from '../../components/TaskList'
 import { chngList, chngUsers,chngId } from "../../actions";
@@ -90,7 +90,7 @@ class ConnectedHome extends Component{
  render(){
   return (
     <div>
-     <LogOut/>
+     
      <AddTask/>
      <TaskList/>
     </div>
