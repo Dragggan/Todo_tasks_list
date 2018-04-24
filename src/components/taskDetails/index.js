@@ -37,7 +37,8 @@ class ConnectedTaskDetails extends Component {
       const updatedList=this.props.toDoList.map(item=>{
     if(item.id==this.props.task.id){
       return Object.assign({},item,{title:changedDescription,
-                                    userId:changedUserId})
+                                    userId:changedUserId,
+                                    completed:this.completedTask.value})
     }
     return item
   });
@@ -76,6 +77,7 @@ class ConnectedTaskDetails extends Component {
               {this.props.users.map((user)=><option key={user.id}>{user.name}</option>)}
     
             </select></div>
+            Completed:<input type="checkbox" ref={(a) => this.completedTask = a}/>
         <input className="btn" type="submit" value="save changes" onClick={this.saveChanges}/>
         <input className="btn" type ="submit" value ="exit details" onClick={this.exitDetails}/>
       </div>,
