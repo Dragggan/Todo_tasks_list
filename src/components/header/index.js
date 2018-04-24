@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import Logout from '../logOut'
 
 import './style.css';
 
 class Header extends Component{
 
     render(){
-        return <header> This is Header </header>;
+        return( <div>
+            <Logout/>
+            <header> This is Header </header>
+            </div>);
     }
 }
 
