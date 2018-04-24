@@ -24,78 +24,78 @@ import { chngList, chngUsers,chngId } from "../../actions";
 //kada ovo uradimo ovo chngList levo od dve tacke postaje deo propsa nase komponente i
 // mozemo da ga pozovemo bilo kad
 const mapDispatchToProps = dispatch => {
-  return {
-    chngList: list => dispatch(chngList(list)),
-    chngId: id => dispatch(chngId(id)),
-    chngUsers: list => dispatch(chngUsers(list)),
-    
-  };
+ return {
+  chngList: list => dispatch(chngList(list)),
+  chngId: id => dispatch(chngId(id)),
+  chngUsers: list => dispatch(chngUsers(list)),
+
+ };
 };
 
 const mapStateToProps = state => {
-  return { idCounter: state.idCounter,
-            toDoList:state.toDoList,
-            users:state.users};
+ return { idCounter: state.idCounter,
+  toDoList:state.toDoList,
+  users:state.users};
 };
 
 class ConnectedHome extends Component{
-    constructor(props){
-        super(props)
-    }
+ constructor(props){
+  super(props)
+ }
 
-    setToDoList(responseData){
-    const toDoList=responseData.filter((item)=>item.userId=='1')//ovaj API vraca
-     // jako veliki json za toodo listu, zato smo ovde filtrirali da vrati toodo
-     // listu samo za jednog usera (na ovome cemo jos raditi)
-    console.log(toDoList);
-    const idLength=toDoList.length;
-    console.log(idLength);
-    this.props.chngList(toDoList); //ovde u sustini pozivamo akciju i prosledjujemo
-     // joj dobijene podatke iz Apija
-    this.props.chngId(idLength);
-    }
+ setToDoList(responseData){
+  const toDoList=responseData.filter((item)=>item.userId=='1')//ovaj API vraca
+  // jako veliki json za toodo listu, zato smo ovde filtrirali da vrati toodo
+  // listu samo za jednog usera (na ovome cemo jos raditi)
+  console.log(toDoList);
+  const idLength=toDoList.length;
+  console.log(idLength);
+  this.props.chngList(toDoList); //ovde u sustini pozivamo akciju i prosledjujemo
+  // joj dobijene podatke iz Apija
+  this.props.chngId(idLength);
+ }
 
-    setUsers(responseUsers){
-    console.log(responseUsers);
-    this.props.chngUsers(responseUsers); 
+ setUsers(responseUsers){
+  console.log(responseUsers);
+  this.props.chngUsers(responseUsers);
 
-    }
+ }
 
-componentDidMount(){
-    if(!this.props.toDoList.length>0){
-        const url=new URL('https://jsonplaceholder.typicode.com/todos')
-        const request=new Request(url,{
-        method:'GET',
-        mode:'cors'
-    });
+ componentDidMount(){
+  if(!this.props.toDoList.length>0){
+   const url=new URL('https://jsonplaceholder.typicode.com/todos')
+   const request=new Request(url,{
+    method:'GET',
+    mode:'cors'
+   });
 
-    fetch(request).then(response=>
-      response.json()).then(responseData=>this.setToDoList(responseData))
-      .catch(function(error){console.log(error);})
+   fetch(request).then(response=>
+     response.json()).then(responseData=>this.setToDoList(responseData))
+     .catch(function(error){console.log(error);})
   }
-    if(!this.props.users.length>0){
-      const url2=new URL('https://jsonplaceholder.typicode.com/users')
-        const request2=new Request(url2,{
-        method:'GET',
-        mode:'cors'
-    });
+  if(!this.props.users.length>0){
+   const url2=new URL('https://jsonplaceholder.typicode.com/users')
+   const request2=new Request(url2,{
+    method:'GET',
+    mode:'cors'
+   });
 
-    fetch(request2).then(response=>
-      response.json()).then(responseData=>this.setUsers(responseData))
-      .catch(function(error){console.log(error);})
+   fetch(request2).then(response=>
+     response.json()).then(responseData=>this.setUsers(responseData))
+     .catch(function(error){console.log(error);})
   }
-                
-}
 
-    render(){
-        return ( 
-            <div>
-                {/*<LogOut/>*/}
-                <AddTask/>
-                <TaskList/>
-            </div>
-            )
-    }
+ }
+
+ render(){
+  return (
+    <div>
+     <LogOut/>
+     <AddTask/>
+     <TaskList/>
+    </div>
+  )
+ }
 }
 
 
