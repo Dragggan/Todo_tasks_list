@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import {
-  withRouter
-} from "react-router-dom";
-
+import {withRouter} from "react-router-dom";
 import { connect } from "react-redux";
 import { isAuth } from "../../actions";
+import './style.css';
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -20,7 +18,7 @@ const ConnectedLogOut = withRouter(
 
     ({history,...props})=>props.auth.isAuthenticated ? (
         <div>
-        <button  
+        <button className="logOut"
         onClick={()=>{
             props.isAuth(false);
             history.push("/login")}}>SignOut</button>

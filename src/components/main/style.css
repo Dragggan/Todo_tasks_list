@@ -1,17 +1,14 @@
 #main, input {
-    
-     font-family: "Gill Sans", system-ui;
 
 }
 
 #main{
-    bottom:40px;
-    top:80px;
-    right:10px;
-    left:10px;
-    position:absolute;
-    overflow-y: auto;
-    margin-left:100px;
-     font-family: "Gill Sans", system-ui;
+  bottom: 40px;
+  top: 80px;
+  left: 5%;
+  position: absolute;
+  overflow-y: auto;
+  border: solid red 3px;
+  width: 90%;
 }
 

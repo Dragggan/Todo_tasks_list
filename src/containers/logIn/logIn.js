@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {isAuth} from "../../actions";
-import './css.css';
+import './style.css';
 import auth from '../../components/auth'
+
+
+
 
 const mapDispatchToProps = dispatch => {
  return {

@@ -5,9 +5,6 @@ import App from "./app";
 import store from './store';
 
 ReactDOM.render(
-
-
-
   <Provider store={store}>
    <App/>
   </Provider>

@@ -3,6 +3,8 @@ import './style.css';
 import {addTask, chngId} from "../../actions"
 import { connect } from "react-redux";
 
+
+
 const mapDispatchToProps = dispatch => {
   return {
     addTask: task => dispatch(addTask(task)),
@@ -53,10 +55,13 @@ class ConnectedAddTask extends Component {
             <input ref={(a) => this.inputTask = a}
               placeholder="please enter your task" className="todo-input" >
             </input>
-            
+           <span className="highlight"></span>
+           <span className="bar"></span>
             <select id="assignee">
            
-              {this.props.users.map((user)=><option key={user.id}>{user.username}</option>)}
+              {this.props.users.map((user)=><option
+
+                key={user.id}>{user.username}</option>)}
     
             </select>
            

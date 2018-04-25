@@ -6,7 +6,7 @@ import './style.css'
 class Footer extends Component{
 
  render(){
-  return <footer>©pola4.reda </footer>
+  return <footer><h3 className="footerText">©pola4.reda </h3></footer>
  }
 }
 

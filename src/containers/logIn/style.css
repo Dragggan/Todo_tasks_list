@@ -18,6 +18,8 @@ body {
  h2 {
    color: #2196f3;
    text-align: center;
+   position: relative;
+   top: 20px;
  }
 
 .group {
@@ -32,7 +34,7 @@ textarea {
 input,
 textarea {
   background: none;
-  color: red;
+  color: #2196F3;
   font-size: 28px;
   padding: 10px 10px 10px 5px;
   display: inherit;
@@ -79,6 +81,7 @@ label {
   position: relative;
   display: block;
   width: 320px;
+  left: 0;
 }
 .bar:before {
   content: '';

@@ -3,7 +3,7 @@ import React from 'react';
 const defaultPage = () =>
   (
     <div>
-     Not found
+     Not found 404
     </div>
   );
 

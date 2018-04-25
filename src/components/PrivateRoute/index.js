@@ -7,7 +7,7 @@ const mapStateToProps = state => {
   return { auth: state.auth };
 };
 
-const ConnectedPrivateRoute = ({ component: Component,auth, ...rest,}) => (
+const ConnectedPrivateRoute = ({ component: Component,auth, ...rest}) => (
   <Route {...rest} render={props =>auth.isAuthenticated ? (
         <Component {...props} />
       ) : (
