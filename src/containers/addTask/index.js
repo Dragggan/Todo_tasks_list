@@ -41,8 +41,6 @@ class ConnectedAddTask extends Component {
       this.props.addTask(taskArray);
       this.props.chngId(id);
     }
-   
-
     e.preventDefault();
 
     
@@ -57,7 +55,7 @@ class ConnectedAddTask extends Component {
             </input>
            <span className="highlight"></span>
            <span className="barInHome"></span>
-            <select id="assignee">
+            <select id="assigneeSelect">
            
               {this.props.users.map((user)=><option
 

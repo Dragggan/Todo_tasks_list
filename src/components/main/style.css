@@ -8,7 +8,7 @@
   left: 5%;
   position: absolute;
   overflow-y: auto;
-  border: solid red 3px;
+  overflow-x: hidden;
   width: 90%;
 }
 
