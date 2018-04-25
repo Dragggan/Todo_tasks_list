@@ -3,28 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a14d999e-d4d1-4a57-8996-5b01ab503a09" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/main.js" afterPath="$PROJECT_DIR$/docs/main.js" />
-      <change beforePath="$PROJECT_DIR$/src/app/index.js" afterPath="$PROJECT_DIR$/src/app/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/PrivateRoute/index.js" afterPath="$PROJECT_DIR$/src/components/PrivateRoute/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/index.js" afterPath="$PROJECT_DIR$/src/components/footer/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/style.css" afterPath="$PROJECT_DIR$/src/components/footer/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.js" afterPath="$PROJECT_DIR$/src/components/header/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/style.css" afterPath="$PROJECT_DIR$/src/components/header/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/components/logOut/index.js" afterPath="$PROJECT_DIR$/src/components/logOut/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/logOut/style.css" afterPath="$PROJECT_DIR$/src/components/logOut/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/index.js" afterPath="$PROJECT_DIR$/src/components/main/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/style.css" afterPath="$PROJECT_DIR$/src/components/main/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/components/task/index.js" afterPath="$PROJECT_DIR$/src/components/task/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/task/style.css" afterPath="$PROJECT_DIR$/src/components/task/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/components/taskList/index.js" afterPath="$PROJECT_DIR$/src/components/taskList/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/taskList/style.css" afterPath="$PROJECT_DIR$/src/components/taskList/style.css" />
       <change beforePath="$PROJECT_DIR$/src/containers/addTask/index.js" afterPath="$PROJECT_DIR$/src/containers/addTask/index.js" />
       <change beforePath="$PROJECT_DIR$/src/containers/addTask/style.css" afterPath="$PROJECT_DIR$/src/containers/addTask/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/containers/defaultPage/defaultPage.js" afterPath="$PROJECT_DIR$/src/containers/defaultPage/defaultPage.js" />
-      <change beforePath="$PROJECT_DIR$/src/containers/logIn/css.css" afterPath="$PROJECT_DIR$/src/containers/logIn/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/containers/logIn/logIn.js" afterPath="$PROJECT_DIR$/src/containers/logIn/logIn.js" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +31,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/task/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="200">
+              <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="58" selection-end-column="88" />
               <folding>
                 <element signature="e#119#157#0" expanded="true" />
               </folding>
@@ -63,7 +43,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/taskList/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="270">
               <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
               <folding />
             </state>
@@ -73,8 +53,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/addTask/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="1260">
+              <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="72" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -85,7 +65,7 @@
       <file leaf-file-name="logIn.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/logIn/logIn.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="-270">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -97,8 +77,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/logIn/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2010">
-              <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+            <state relative-caret-position="390">
+              <caret line="151" column="1" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="151" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -107,28 +87,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/addTask/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/header/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/task/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+            <state relative-caret-position="101">
+              <caret line="115" column="14" lean-forward="true" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -212,8 +172,8 @@
         <option value="$PROJECT_DIR$/src/components/task/style.css" />
         <option value="$PROJECT_DIR$/src/containers/logIn/style.css" />
         <option value="$PROJECT_DIR$/src/components/header/style.css" />
-        <option value="$PROJECT_DIR$/src/containers/addTask/index.js" />
         <option value="$PROJECT_DIR$/src/containers/logIn/logIn.js" />
+        <option value="$PROJECT_DIR$/src/containers/addTask/index.js" />
         <option value="$PROJECT_DIR$/src/containers/addTask/style.css" />
       </list>
     </option>
@@ -445,12 +405,12 @@
       <workItem from="1524600538397" duration="1317000" />
       <workItem from="1524649734689" duration="2783000" />
       <workItem from="1524654062167" duration="7744000" />
-      <workItem from="1524663957752" duration="6225000" />
+      <workItem from="1524663957752" duration="7996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94449000" />
+    <option name="totallyTimeSpent" value="96220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,6 +423,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1" width="1918" height="1036" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2247731" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -471,7 +432,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906976" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24893436" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2717521" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2717521" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39928487" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -880,24 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/task/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="e#119#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/taskList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/task/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
@@ -914,19 +857,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/addTask/index.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/logIn/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="151" column="1" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="151" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/logIn/logIn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="-270">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -934,18 +875,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/logIn/style.css">
+    <entry file="file://$PROJECT_DIR$/src/containers/addTask/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+        <state relative-caret-position="1260">
+          <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/taskList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/task/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="58" selection-end-column="88" />
+          <folding>
+            <element signature="e#119#157#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/addTask/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        <state relative-caret-position="101">
+          <caret line="115" column="14" lean-forward="true" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
           <folding />
         </state>
       </provider>

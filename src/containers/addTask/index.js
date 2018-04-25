@@ -56,7 +56,7 @@ class ConnectedAddTask extends Component {
               placeholder="please enter your task" className="todo-input" >
             </input>
            <span className="highlight"></span>
-           <span className="bar"></span>
+           <span className="barInHome"></span>
             <select id="assignee">
            
               {this.props.users.map((user)=><option
