@@ -72,7 +72,7 @@ class ConnectedTaskDetails extends Component {
       <div className='modal'>
         <div>id: {this.props.task.id}</div>
         <div> <input id ="description" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
-        <div> Assignee: <select id="assignee" selected={requestedUser.name} ref={(a) => this.selectedUser = a}>
+        <div> Assignee:<select selected={requestedUser.name} ref={(a) => this.selectedUser = a}>
            
               {this.props.users.map((user)=><option key={user.id}>{user.name}</option>)}
     
