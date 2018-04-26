@@ -28,12 +28,14 @@ class ConnectedAddTask extends Component {
 
   addTask(e) {
     if (this.inputTask.value !== '') {
+      var username=document.getElementById("assignee").value;
+      var selectedUser=this.props.users.filter(user=>user.username==username);
       var id=this.props.idCounter+1;
       var taskArray={
         title: this.inputTask.value,
         id: id,
         completed: false,
-        userId: document.getElementById("assignee").value
+        userId: selectedUser.id,
       };
       var users=this.props.users;
       console.log(users)
