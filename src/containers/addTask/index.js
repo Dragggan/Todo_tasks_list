@@ -28,7 +28,7 @@ class ConnectedAddTask extends Component {
 
   addTask() {
     if (this.inputTask.value !== '' && this.props.users.length>0) {
-      var username=document.getElementById("assignee").value;
+      var username=document.getElementById("assigneeSelect").value;
       var selectedUser=this.props.users.filter(user=>user.username=='bret')[0];
       console.log(selectedUser);
       
