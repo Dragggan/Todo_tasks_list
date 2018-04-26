@@ -17,7 +17,7 @@ const mapStateToProps = state => {
 const ConnectedLogOut = withRouter(
 
     ({history,...props})=>props.auth.isAuthenticated ? (
-        <div>
+        <div id="logOut">
         <button className="logOut"
         onClick={()=>{
             props.isAuth(false);

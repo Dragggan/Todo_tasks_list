@@ -16,7 +16,7 @@ class Main extends Component {
           <Switch>
            <PrivateRoute exact  path="/" component={Home} />
            <Route exact  path="/login" component={LogIn} />
-           <Route render={()=>(<h1>404Not found</h1>)} />
+         {/*  <Route render={()=>(<h1>404Not found</h1>)} />*/}
           </Switch>
          </div>
     )

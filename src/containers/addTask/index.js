@@ -26,16 +26,18 @@ class ConnectedAddTask extends Component {
 
   }
 
-  addTask(e) {
-    if (this.inputTask.value !== '') {
+  addTask() {
+    if (this.inputTask.value !== '' && this.props.users.length>0) {
       var username=document.getElementById("assignee").value;
-      var selectedUser=this.props.users.filter(user=>user.username==username);
+      var selectedUser=this.props.users.filter(user=>user.username=='bret')[0];
+      console.log(selectedUser);
+      
       var id=this.props.idCounter+1;
       var taskArray={
         title: this.inputTask.value,
-        id: id,
+        id: id, 
         completed: false,
-        userId: selectedUser.id,
+        userId: 1,
       };
       var users=this.props.users;
       console.log(users)
@@ -43,7 +45,7 @@ class ConnectedAddTask extends Component {
       this.props.addTask(taskArray);
       this.props.chngId(id);
     }
-    e.preventDefault();
+    //e.preventDefault();
 
     
   }
@@ -51,7 +53,7 @@ class ConnectedAddTask extends Component {
   render() {
     return (
       <div>
-          <form onSubmit={this.addTask}>
+          <form>
             <input ref={(a) => this.inputTask = a}
               placeholder="please enter your task" className="todo-input" >
             </input>
@@ -65,7 +67,7 @@ class ConnectedAddTask extends Component {
     
             </select>
            
-            <button type="submit" className="todo-add" >Add to Task List</button>
+            <button type="button" className="todo-add" onClick={this.addTask}>Add to Task List</button>
           </form>
       </div>
     );
