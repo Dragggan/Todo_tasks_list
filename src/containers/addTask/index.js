@@ -55,10 +55,8 @@ class ConnectedAddTask extends Component {
       <div>
           <form>
             <input ref={(a) => this.inputTask = a}
-              placeholder="please enter your task" className="todo-input" >
+              placeholder="please enter your task" >
             </input>
-           <span className="highlight"></span>
-           <span className="barInHome"></span>
             <select id="assigneeSelect">
            
               {this.props.users.map((user)=><option
@@ -67,7 +65,7 @@ class ConnectedAddTask extends Component {
     
             </select>
            
-            <button type="button" className="todo-add" onClick={this.addTask}>Add to Task List</button>
+            <button type="button" onClick={this.addTask}>Add to Task List</button>
           </form>
       </div>
     );

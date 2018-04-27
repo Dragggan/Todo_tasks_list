@@ -49,20 +49,38 @@ showDetails(){
       if(this.props.users.length>0){
       const selectedUser=this.props.users.filter(user=>user.id==this.props.item.userId)[0]
         return(
-            <div className="container">
-            <TaskDetails showDetails={this.props.item.showDetails} task={this.props.item}/>
-            <div className="theList">
-         
-        <div id="id"> Id: {this.props.item.id} </div>
-        <div id="title"> Title: {this.props.item.title} </div>
-        <div id="completed"> Completed: {this.props.item.completed? 'Yes ':'No '} </div>
-        <div  className="assignee">Assignee: {selectedUser.name}</div>
-        
-</div>
-         <input type="submit" onClick={this.deleteTask} value="Delete Task" className="btnAddAndDelete" /> {/*previdjeno dugme koje bi brisalo task, mozda ne moramo ovako da implementiramo brisanje taska*/}
-         <input type="submit"  value="Show Details" className="btnAddAndDelete" onClick={this.showDetails}/>
-            </div>)
+         <div className="row">
+  <div id="admin" className="col s12">
+    <div className="card material-table">
+      <div className="table-header">
 
+      </div>
+      <table id="datatable">
+      <thead>
+            <TaskDetails showDetails={this.props.item.showDetails} task={this.props.item}/>
+         <tr>
+    <th>Id</th>
+    <th>Title</th> 
+    <th>Completed</th>
+    <th>Assegnee</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+        <td> {this.props.item.id} </td>
+        <td> {this.props.item.title} </td>
+        <td> {this.props.item.completed? 'Yes ':'No '} </td>
+        <td> {selectedUser.name}</td>
+         <td><input type="submit" onClick={this.deleteTask} value="Delete Task"  /> </td>
+         <td><input type="submit"  value="Show Details" onClick={this.showDetails}/></td>
+  </tr>
+   </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+            )
+       
     }
     return null
   }
