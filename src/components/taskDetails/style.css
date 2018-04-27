@@ -1,14 +1,16 @@
 .modal {
-  width: 100%;
+  width: 60%;
   position: absolute;
-  left: 0%;
+  left: 20%;
   top: 20%;
   margin: 9px auto;
   z-index: 2;
-  background-color: #66cdaa;
+  background-color: #3C3C3C;
   padding: 20px 10px;
   color: #2196f3;
   border: solid #2196f3  3px;
+  border-radius: 5px;
+   font: 400 14px CoreSans, Arial,sans-serif;
 
 
 }
@@ -16,7 +18,7 @@
 
 }
 
-.btn {
+/*.btn {
   background: #fff;
   font-size: 15px;
   width: 10%;
@@ -32,6 +34,15 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}*/
+
+.buttonDetails {
+    padding: 10px; 
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background: transparent; 
+    color: #808080; 
+    cursor: pointer;
 }
 
 
@@ -42,4 +53,22 @@
   display: inline-block;
   margin-bottom: 0; 
   vertical-align: middle; 
+}
+
+#descriptionDetails{
+   padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+    border: 1px solid #dddddd;
+     font: 400 14px CoreSans, Arial,sans-serif;
+}
+
+#changeUser{
+   padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+    border: 1px solid #dddddd;
+     font: 400 14px CoreSans, Arial,sans-serif;
 }

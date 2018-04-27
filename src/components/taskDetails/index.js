@@ -32,7 +32,7 @@ class ConnectedTaskDetails extends Component {
     if (this.inputTask.value !== '') {
       var changedDescription=this.inputTask.value;
       var changedUser=this.selectedUser.value;
-      var changedUserId=this.props.users.filter(user=>user.name==changedUser)[0].id;
+      var changedUserId=this.props.users.filter(user=>user.username==changedUser)[0].id;
    
       const updatedList=this.props.toDoList.map(item=>{
     if(item.id==this.props.task.id){
@@ -71,16 +71,16 @@ class ConnectedTaskDetails extends Component {
     return ReactDOM.createPortal(
       <div className='modal'>
         <div>id: {this.props.task.id}</div>
-        <div> <input id ="description" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
-        <div> Assignee:<select selected={requestedUser.name} ref={(a) => this.selectedUser = a}>
+        <div> <input id ="descriptionDetails" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
+        <div> Assignee:<select defaultValue={requestedUser.username} ref={(a) => this.selectedUser = a} id="changeUser">
            
-              {this.props.users.map((user)=><option key={user.id}>{user.name}</option>)}
+              {this.props.users.map((user)=><option key={user.id}>{user.username}</option>)}
     
             </select></div>
             
             <div className="inline-field">Completed:<input type="checkbox" id="taskCheck" ref={(a) => this.completedTask = a}/></div>
-        <input className="btn" type="submit" value="save changes" onClick={this.saveChanges}/>
-        <input className="btn" type ="submit" value ="exit details" onClick={this.exitDetails}/>
+        <input className="buttonDetails" type="submit" value="save changes" onClick={this.saveChanges}/>
+        <input className="buttonDetails" type ="submit" value ="exit details" onClick={this.exitDetails}/>
       </div>,
       this.modalRoot
     );

@@ -29,7 +29,7 @@ class ConnectedAddTask extends Component {
   addTask() {
     if (this.inputTask.value !== '' && this.props.users.length>0) {
       var username=document.getElementById("assigneeSelect").value;
-      var selectedUser=this.props.users.filter(user=>user.username=='bret')[0];
+      var selectedUser=this.props.users.filter(user=>user.username==username)[0];
       console.log(selectedUser);
       
       var id=this.props.idCounter+1;
@@ -37,7 +37,7 @@ class ConnectedAddTask extends Component {
         title: this.inputTask.value,
         id: id, 
         completed: false,
-        userId: 1,
+        userId: selectedUser.id,
       };
       var users=this.props.users;
       console.log(users)
@@ -52,10 +52,10 @@ class ConnectedAddTask extends Component {
 
   render() {
     return (
-      <div>
-          <form>
+      <div id="addTask">
+          
             <input ref={(a) => this.inputTask = a}
-              placeholder="please enter your task" >
+              placeholder="please enter your task"  className="inputAddTask">
             </input>
             <select id="assigneeSelect">
            
@@ -65,8 +65,8 @@ class ConnectedAddTask extends Component {
     
             </select>
            
-            <button type="button" onClick={this.addTask}>Add to Task List</button>
-          </form>
+            <button type="button" onClick={this.addTask} className="buttonAddTask">Add to Task List</button>
+          
       </div>
     );
   }

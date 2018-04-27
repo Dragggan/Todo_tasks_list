@@ -67,10 +67,11 @@ class ConnectedLogIn extends Component {
    />
   }
   return (
-    <form>
+    <div id="signInContainer">
+    <div id="signIn">
      <h2>Sign In</h2>
      <div className="group">
-      <input
+      <input className="loginInput"
       ref={(a) => this.inputEmail = a}
         type="text"
         required="required"
@@ -78,10 +79,10 @@ class ConnectedLogIn extends Component {
       />
       <span className="highlight"></span>
       <span className="bar"></span>
-      <label>Email</label>
+      <label className="loginLabel">Email</label>
      </div>
      <div className="group">
-      <input
+      <input className="loginInput"
         ref={(a) => this.inputPass = a}
         type="password"
         required="required"
@@ -89,7 +90,7 @@ class ConnectedLogIn extends Component {
       />
       <span className="highlight"></span>
       <span className="bar"></span>
-      <label>password</label>
+      <label className="loginLabel">password</label>
      </div>
 
 
@@ -99,7 +100,8 @@ class ConnectedLogIn extends Component {
               onClick={() => this.signUp()}>LogIn
       </button>
      </div>
-    </form>
+    </div>
+    </div>
 
 
 

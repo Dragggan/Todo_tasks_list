@@ -19,11 +19,8 @@ class ConnectedTaskList extends Component{
             return <div>Waiting for results</div>// ovo radimo da nam ne pukne aplikacija ako nema nista u store-u
         }
         return (
-             <div>
-            <h1 id="todolist"> To do List</h1>
-            <div>
+            <div className="table">
             {this.props.toDoList.map((item)=><Task item={item} key={item.id}/>)}
-            </div>
             </div>
             )
     }

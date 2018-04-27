@@ -5,7 +5,7 @@ body {
    box-sizing: border-box;
  }
 
- form {
+ #signIn {
    position: absolute;
    top: 30%;
    left: 50%;
@@ -13,10 +13,16 @@ body {
    height: 300px;
    margin-left: -150px;
    margin-top: -150px;
+   background:#3C3C3C;
+ }
+ #signInContainer {
+   width:100%;
+   height:100%;
+   background:#3C3C3C;
  }
 
  h2 {
-   color: #2196f3;
+   color: #ffffff;
    text-align: center;
    position: relative;
    top: 20px;
@@ -31,10 +37,10 @@ textarea {
   resize: none;
 }
 
-input,
+.loginInput,
 textarea {
   background: none;
-  color: #2196F3;
+  color: #ffffff;
   font-size: 28px;
   padding: 10px 10px 10px 5px;
   display: inherit;
@@ -44,29 +50,29 @@ textarea {
   border-bottom: 1px solid #c6c6c6;
 
 }
-input:focus,
+.loginInput:focus,
 textarea:focus {
   outline: none;
 }
-input:focus ~ label, input:valid ~ label,
+.loginInput:focus ~ label, .loginInput:valid ~ label,
 textarea:focus ~ label,
 textarea:valid ~ label {
   top: -14px;
   font-size: 12px;
-  color: #2196F3;
+  color: #66CDAA;
 }
-input:focus ~ .bar:before,
+.loginInput:focus ~ .bar:before,
 textarea:focus ~ .bar:before {
   width: 320px;
 }
 
-input[type="password"] {
+.loginInput[type="password"] {
   letter-spacing: 0.3em;
 }
 
 label {
   text-transform: uppercase;
-  color: #2196F3;
+  color: #ffffff;
   font-size: 16px;
   font-weight: normal;
   position: absolute;
@@ -89,15 +95,15 @@ label {
   width: 0;
   bottom: 0px;
   position: absolute;
-  background: #2196F3;
+  background: #66CDAA;
   -webkit-transition: 300ms ease all;
   transition: 300ms ease all;
   left: 0%;
 }
 
 .btn {
-  background: #fff;
-  color: #959595;
+  background: #ffffff;
+  color: #ff0000;
   border: none;
   width: 30%;
   padding: 10px 20px;
@@ -111,24 +117,24 @@ label {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .btn:hover {
-  color: #8b8b8b;
+  color: #ff0000;
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
 }
 .btn.btn-link {
-  background: #2196F3;
+  background: #ff0000;
   color: #d3eafd;
 }
 .btn.btn-link:hover {
   background: #0d8aee;
-  color: #deeffd;
+  color: #ff0000;
 }
 .btn.btn-submit {
-  background: #2196F3;
-  color: #bce0fb;
+  background: #ffffff;
+  color: #3C3C3C;
 }
 .btn.btn-submit:hover {
-  background: #0d8aee;
-  color: #deeffd;
+  background: #66CDAA;
+  color: #ffffff;
 }
 .btn.btn-cancel {
   background: #eee;
