@@ -23,10 +23,21 @@ const mapStateToProps = state => {
 class ConnectedTaskDetails extends Component {
   constructor(props) {
     super(props);
+    this.state={isCompleted:null}
     this.exitDetails=this.exitDetails.bind(this);
     this.saveChanges=this.saveChanges.bind(this);
+    this.completedStatus=this.completedStatus.bind(this);
     this.modalRoot = document.getElementById('modal-root');
   }
+componentWillReceiveProps(){
+  if(!this.state.isCompleted){
+  this.setState({isCompleted:this.props.task.completed})
+}
+}
+
+completedStatus(){
+this.setState({isCompleted:!this.state.isCompleted})
+}
 
   saveChanges(e){
     if (this.inputTask.value !== '') {
@@ -38,7 +49,7 @@ class ConnectedTaskDetails extends Component {
     if(item.id==this.props.task.id){
       return Object.assign({},item,{title:changedDescription,
                                     userId:changedUserId,
-                                    completed:this.completedTask.value})
+                                    completed:this.state.isCompleted})
     }
     return item
   });
@@ -70,15 +81,23 @@ class ConnectedTaskDetails extends Component {
       console.log(requestedUser)
     return ReactDOM.createPortal(
       <div className='modal'>
-        <div>id: {this.props.task.id}</div>
-        <div> <input id ="descriptionDetails" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
+         <div className="inline-field">
+          <div id="showId">id: {this.props.task.id}</div>
+          <div id="showCompleted">Completed:
+            <input type="submit" 
+                  className="buttonDetails" 
+                  value={this.state.isCompleted?"YES":"NO"} 
+                  id="taskCheck" onClick={this.completedStatus}/>
+            </div>
+          </div>
+        <div> <textarea id ="descriptionDetails" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
         <div> Assignee:<select defaultValue={requestedUser.username} ref={(a) => this.selectedUser = a} id="changeUser">
            
               {this.props.users.map((user)=><option key={user.id}>{user.username}</option>)}
     
             </select></div>
             
-            <div className="inline-field">Completed:<input type="checkbox" id="taskCheck" ref={(a) => this.completedTask = a}/></div>
+            
         <input className="buttonDetails" type="submit" value="save changes" onClick={this.saveChanges}/>
         <input className="buttonDetails" type ="submit" value ="exit details" onClick={this.exitDetails}/>
       </div>,

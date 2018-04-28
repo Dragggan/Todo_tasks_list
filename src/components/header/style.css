@@ -2,16 +2,18 @@ header {
     height: 60px;
     position: fixed;
     text-align: center;
-    font-family: "arial", sans-serif;
+    font-family: "Gill Sans", system-ui;
     background-color: #3C3C3C;
     width: 100%;
     margin: 0;
     top: 0;
     right: 0;
+
 }
 header .headerHeadline {
     color: white;
-    position: relative;
-    bottom: 9px;
-    left: 42px;
+    font-size: 25px;
+    margin-top: 10px;
+    
+   
 }

@@ -9,7 +9,7 @@ class Header extends Component{
         return(
           <div>
             <Logout/>
-            <header> <h1 className="headerHeadline">To do app</h1> </header>
+            <header> <div className="headerHeadline">TO DO APP</div> </header>
             </div>
         );
     }

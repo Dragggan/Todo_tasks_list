@@ -26,6 +26,7 @@ body {
    text-align: center;
    position: relative;
    top: 20px;
+   font-family: "Gill Sans", system-ui;
  }
 
 .group {
@@ -81,6 +82,7 @@ label {
   top: 10px;
   -webkit-transition: 300ms ease all;
   transition: 300ms ease all;
+  font-family: "Gill Sans", system-ui;
 }
 
 .bar {
@@ -131,6 +133,7 @@ label {
 .btn.btn-submit {
   background: #ffffff;
   color: #3C3C3C;
+  font-family: "Gill Sans", system-ui
 }
 .btn.btn-submit:hover {
   background: #66CDAA;

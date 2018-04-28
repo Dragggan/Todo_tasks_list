@@ -69,7 +69,7 @@ class ConnectedLogIn extends Component {
   return (
     <div id="signInContainer">
     <div id="signIn">
-     <h2>Sign In</h2>
+     <h2>SIGN IN</h2>
      <div className="group">
       <input className="loginInput"
       ref={(a) => this.inputEmail = a}

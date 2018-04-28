@@ -1,5 +1,5 @@
 .modal {
-  width: 60%;
+  width: 320px;
   position: absolute;
   left: 20%;
   top: 20%;
@@ -8,14 +8,18 @@
   background-color: #3C3C3C;
   padding: 20px 10px;
   color: #2196f3;
-  border: solid #2196f3  3px;
-  border-radius: 5px;
+  border: solid #66CDAA  2px;
+  border-radius: 10px;
    font: 400 14px CoreSans, Arial,sans-serif;
 
 
 }
-#description{
+#showId{
+  left:2%;
 
+}
+#showCompleted{
+  right:2%;
 }
 
 /*.btn {
@@ -45,11 +49,17 @@
     cursor: pointer;
 }
 
-
+.inline-field{
+  display:flex;
+  justify-content: center;
+}
 
 
 .inline-field input,
-.inline-field label {
+.inline-field label,
+.inline-field div
+
+ {
   display: inline-block;
   margin-bottom: 0; 
   vertical-align: middle; 
@@ -61,7 +71,10 @@
     outline: none;
     margin-right: 10px;
     border: 1px solid #dddddd;
-     font: 400 14px CoreSans, Arial,sans-serif;
+    font: 400 14px "Gill Sans", system-ui;;
+    width:90%;
+    height:100px;
+    word-wrap: break-word;
 }
 
 #changeUser{
