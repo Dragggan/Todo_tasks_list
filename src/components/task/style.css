@@ -5,7 +5,10 @@
 .interactions { 
   text-align: center; 
 }
-
+ #task-assignee:hover{
+  color:#2196f3;
+  cursor:pointer;
+ }
 
 
 .table-header {

@@ -81,25 +81,28 @@ this.setState({isCompleted:!this.state.isCompleted})
       console.log(requestedUser)
     return ReactDOM.createPortal(
       <div className='modal'>
-         <div className="inline-field">
-          <div id="showId">id: {this.props.task.id}</div>
-          <div id="showCompleted">Completed:
-            <input type="submit" 
+        <div id="detailsWrapper">
+          <div className="inline-field">
+            <div id="showId"><div className="detailsLabel">id: </div>{this.props.task.id}</div>
+            <div id="showCompleted"><div className="detailsLabel">Completed:</div>
+              <input type="submit" 
                   className="buttonDetails" 
                   value={this.state.isCompleted?"YES":"NO"} 
                   id="taskCheck" onClick={this.completedStatus}/>
-            </div>
+              </div>
           </div>
-        <div> <textarea id ="descriptionDetails" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
-        <div> Assignee:<select defaultValue={requestedUser.username} ref={(a) => this.selectedUser = a} id="changeUser">
+          <div className="description-field"> <textarea id ="descriptionDetails" type="text" defaultValue={this.props.task.title} ref={(a) => this.inputTask = a}/></div>
+          <div className="assigneeSelect"> <div className="detailsLabel">Assignee: </div><select defaultValue={requestedUser.username} ref={(a) => this.selectedUser = a} id="changeUser">
            
               {this.props.users.map((user)=><option key={user.id}>{user.username}</option>)}
     
             </select></div>
             
-            
-        <input className="buttonDetails" type="submit" value="save changes" onClick={this.saveChanges}/>
-        <input className="buttonDetails" type ="submit" value ="exit details" onClick={this.exitDetails}/>
+          <div className="buttonsWrapper">
+            <input className="buttonDetails" type="submit" value="save changes" onClick={this.saveChanges}/>
+            <input className="buttonDetails" type ="submit" value ="exit details" onClick={this.exitDetails}/>
+          </div>
+        </div>
       </div>,
       this.modalRoot
     );

@@ -3,12 +3,14 @@
 import React, {Component} from 'react'
 import './style.css';
 import { connect } from "react-redux";
-import { chngList } from "../../actions";
-import TaskDetails from "../taskDetails"
+import { chngList, chngUsers } from "../../actions";
+import TaskDetails from "../taskDetails";
+import AssigneeDetails from "../assigneeDetails";
 
 const mapDispatchToProps = dispatch => {
   return {
     chngList: list => dispatch(chngList(list)),
+    chngUsers: list => dispatch(chngUsers(list)),
   };
 };
 
@@ -24,6 +26,7 @@ constructor(props){
 
     this.deleteTask=this.deleteTask.bind(this);
     this.showDetails=this.showDetails.bind(this);
+    this.showUserDetails=this.showUserDetails.bind(this);
 }
 
 deleteTask(){
@@ -44,6 +47,16 @@ showDetails(){
   this.props.chngList(updatedList);
 
 }
+showUserDetails(){
+  const updatedList=this.props.users.map(item=>{
+    if(item.id==this.props.item.userId){
+      return Object.assign({},item,{showDetails:true})
+    }
+    return item
+  });
+  this.props.chngUsers(updatedList);
+
+}
 
     render(){
       if(this.props.users.length>0){
@@ -51,11 +64,12 @@ showDetails(){
         return(
       
   <div className="table-row">
+  <AssigneeDetails id={this.props.item.userId}/>
   <TaskDetails showDetails={this.props.item.showDetails} task={this.props.item}/>
         <span style={{width:'5%'}}> {this.props.item.id} </span>
         <span style={{width:'40%'}}> {this.props.item.title} </span>
         <span style={{width:'10%'}}> {this.props.item.completed? 'Yes ':'No '} </span>
-        <span style={{width:'20%'}}> {selectedUser.username}</span>
+        <span style={{width:'20%'}} id="task-assignee" onClick={this.showUserDetails}> {selectedUser.username}</span>
         <input type="submit" onClick={this.deleteTask} value="Delete Task"  className="taskButton"/>
         <input type="submit"  value="Edit Task" onClick={this.showDetails} className="taskButton"/>
   </div>

@@ -6,12 +6,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import { connect } from "react-redux";
+import { chngUsers } from "../../actions";
 
 import './style.css';
 
 const mapDispatchToProps = dispatch => {
   return {
-    chngList: list => dispatch(chngList(list)),
+    chngUsers: list => dispatch(chngUsers(list)),
   };
 };
 
@@ -33,18 +34,19 @@ class ConnectedAssigneeDetails extends Component {
   exitDetails(e){
     e.preventDefault();
     console.log("exitDetails#AssigneeDetails");
-    const updatedList=this.props.toDoList.map(item=>{
-    if(item.id==this.props.task.id){
+    const updatedList=this.props.users.map(item=>{
+    if(item.id==this.props.id){
       return Object.assign({},item,{showDetails:false})
     }
     return item
   });
-  this.props.chngList(updatedList);
+  this.props.chngUsers(updatedList);
   }
 
   render() {
-    if(this.props.showDetails){
-      requestedUser=this.props.users.filter(user=>user.id==this.props.id);
+    const requestedUser=this.props.users.filter(user=>user.id==this.props.id)[0];
+    if(requestedUser.showDetails){
+      
     return ReactDOM.createPortal(
       <div className='modal'>
         <div>name: {requestedUser.name}</div>
