@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import process from 'process';
 import {Route, NavLink, Switch, BrowserRouter  } from "react-router-dom";
 import Home from '../../containers/home';
 import LogIn from '../../containers/logIn/logIn.js';
@@ -14,7 +15,7 @@ class Main extends Component {
           
          <div id="main">
           <Switch>
-           <PrivateRoute exact  path="/" component={Home} />
+           <PrivateRoute exact  path="/"  component={Home} />
            <Route exact  path="/login" component={LogIn} />
          {/*  <Route render={()=>(<h1>404Not found</h1>)} />*/}
           </Switch>

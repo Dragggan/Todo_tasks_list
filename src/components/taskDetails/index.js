@@ -86,7 +86,8 @@ this.setState({isCompleted:!this.state.isCompleted})
             <div id="showId"><div className="detailsLabel">id: </div>{this.props.task.id}</div>
             <div id="showCompleted"><div className="detailsLabel">Completed:</div>
               <input type="submit" 
-                  className="buttonDetails" 
+                  className="buttonCompleted" 
+                  style={this.state.isCompleted?{color:"#2196f3"}:{color:"#ffffff"}}
                   value={this.state.isCompleted?"YES":"NO"} 
                   id="taskCheck" onClick={this.completedStatus}/>
               </div>

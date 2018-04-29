@@ -48,15 +48,15 @@ class ConnectedAssigneeDetails extends Component {
     if(requestedUser.showDetails){
       
     return ReactDOM.createPortal(
-      <div className='modal'>
-        <div>name: {requestedUser.name}</div>
-        <div>username: {requestedUser.username}</div>
-        <div>email: {requestedUser.email}</div>
-        <div>website: {requestedUser.website}</div>
-        <div>phone: {requestedUser.phone}</div>
+      <div className='modal2'>
+        <div className="assigneeDetails">name: <div className="assigneeInfo">{requestedUser.name}</div></div>
+        <div className="assigneeDetails">username:<div className="assigneeInfo"> {requestedUser.username}</div></div>
+        <div className="assigneeDetails">email: <div className="assigneeInfo">{requestedUser.email}</div></div>
+        <div className="assigneeDetails">website: <div className="assigneeInfo">{requestedUser.website}</div></div>
+        <div className="assigneeDetails">phone: <div className="assigneeInfo">{requestedUser.phone}</div></div>
       
         
-        <button onClick={this.exitDetails}>exit details</button>
+        <button className="buttonDetails" onClick={this.exitDetails}>exit details</button>
       </div>,
       this.modalRoot
     );

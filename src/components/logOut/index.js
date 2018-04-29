@@ -21,7 +21,7 @@ const ConnectedLogOut = withRouter(
         <button className="logOut"
         onClick={()=>{
             props.isAuth(false);
-            history.push("/login")}}>SignOut</button>
+            history.push("/login")}}>Sign Out</button>
         </div>
         ):
     null

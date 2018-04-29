@@ -1,8 +1,8 @@
 .modal {
   width: 320px;
   position: absolute;
-  left: 20%;
-  top: 20%;
+  
+  
   margin: 9px auto;
   z-index: 2;
   background-color: #3C3C3C;
@@ -10,9 +10,26 @@
   color: #2196f3;
   border: solid #2196F3  2px;
   border-radius: 10px;
-   font: 400 14px CoreSans, Arial,sans-serif;
+  font: 400 14px "Gill Sans", system-ui;
   
 }
+
+@media(max-width: 500px){
+    .modal{
+        left: 2%;
+        top: 60px;
+    }
+    
+}
+
+@media(min-width: 501px){
+    .modal{
+        left: 20%;
+        top: 20%;
+    }
+    
+}
+
 
 #detailsWrapper{
   margin-left: 5%;
@@ -20,10 +37,12 @@
 }
 #showId{
   left:2%;
+  font-family:"Gill Sans", system-ui;
 
 }
 #showCompleted{
   right:2%;
+  font-family:"Gill Sans", system-ui;
 }
 
 /*.btn {
@@ -45,12 +64,22 @@
 }*/
 
 .buttonDetails {
-    padding: 10px; 
+    padding: 8px; 
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff; 
+    color: #3c3c3c; 
+    cursor: pointer;
+    font-family: "Gill Sans", system-ui;
+}
+.buttonCompleted {
+    padding: 7px; 
     border-radius: 5px;
     border: 1px solid #dddddd;
     background: transparent; 
-    color: #808080; 
+    color: #ffffff; 
     cursor: pointer;
+    font-family: "Gill Sans", system-ui;
 }
 
 .inline-field{
@@ -79,6 +108,7 @@
   display:flex;
   justify-content: flex-end;
   align-items: center;
+  font-family:"Gill Sans", system-ui;
   
 }
 
@@ -99,9 +129,9 @@
     outline: none;
     
     border: 1px solid #dddddd;
-    font: 400 14px "Gill Sans", system-ui;;
+    font: 400 14px "Gill Sans", system-ui;
     
-    height:100px;
+    height:150px;
     word-wrap: break-word;
 }
 
@@ -111,7 +141,7 @@
     outline: none;
     margin-right: 10px;
     border: 1px solid #dddddd;
-     font: 400 14px CoreSans, Arial,sans-serif;
+     font: 400 14px "Gill Sans", system-ui;
 }
 
 .detailsLabel{

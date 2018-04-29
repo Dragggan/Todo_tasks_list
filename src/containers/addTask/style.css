@@ -4,18 +4,38 @@
     outline: none;
     margin-right: 10px;
     border: 1px solid #dddddd;
-     font: 400 14px "Gill Sans", system-ui;
+    font: 400 14px "Gill Sans", system-ui;
+    width:320px;
+    color:#2196F3;
          }
 
-.buttonAddTask, #assigneeSelect{
+.buttonAddTask{
 
     padding: 10px; 
     border-radius: 5px;
     border: 1px solid #dddddd;
-    background: transparent; 
-    color: #808080; 
+    background-color: #3C3C3C;
+    color: #ffffff; 
     cursor: pointer;
     font-family: "Gill Sans", system-ui;
 
+}
+
+#assigneeSelect{
+
+    padding: 10px; 
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background: transparent; 
+    color: #3C3C3C; 
+    cursor: pointer;
+    font-family: "Gill Sans", system-ui;
+
+}
+
+#addTask{
+    margin-top: 10px;
+    margin-left: 10px;
 }
 

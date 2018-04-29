@@ -1,0 +1,39 @@
+.assigneeDetails{
+    padding:5px;
+}
+.assigneeInfo{
+    color:#ffffff;
+
+}
+
+.modal2 {
+  width: 280px;
+  position: absolute;
+  
+  
+  margin: 9px auto;
+  z-index: 2;
+  background-color: #3C3C3C;
+  padding: 20px 10px;
+  color: #2196f3;
+  border: solid #2196F3  2px;
+  border-radius: 10px;
+  font: 400 14px "Gill Sans", system-ui;
+  
+}
+
+@media(max-width: 500px){
+    .modal2{
+        left: 2%;
+        top: 60px;
+    }
+    
+}
+
+@media(min-width: 501px){
+    .modal2{
+        left: 20%;
+        top: 20%;
+    }
+    
+}

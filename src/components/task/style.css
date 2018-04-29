@@ -8,6 +8,8 @@
  #task-assignee:hover{
   color:#2196f3;
   cursor:pointer;
+  
+
  }
 
 
@@ -35,6 +37,8 @@
   border: 1px solid #e3e3e3;
   border-radius: 5px;
   color:#3C3C3C;
+  align-items: center;
+  justify-content: space-between;
   }
 
 .table-header > span { 
@@ -44,6 +48,15 @@
  }
 
 .table-row > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    text-align: center;
+
+ }
+
+.table-row > div {
+    display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 0 3px; 
@@ -70,8 +83,12 @@
     padding: 10px; 
     border-radius: 5px;
     border: 1px solid #dddddd;
-    background: transparent; 
-    color: #808080; 
+    background-color: #3C3C3C; 
+    color: #ffffff; 
     cursor: pointer;
     font-family: "Gill Sans", system-ui
+}
+
+#taskId{
+  padding-right: 15px;
 }
