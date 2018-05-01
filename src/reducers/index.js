@@ -1,6 +1,3 @@
-//reduceri su funkcije koje menjaju state tako sto od akcije dobija podatak i uputsvo sta s
-// njim treba da se uradi
-
 const initialState = {
   idCounter:0,
   toDoList: [],
@@ -59,7 +56,6 @@ const rootReducer = (state = initialState, action) => {
       return state;
 
 }
-  
 };
 
 export default rootReducer;

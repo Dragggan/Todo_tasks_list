@@ -9,14 +9,6 @@ import './style.css'
 import {BrowserRouter as Router} from "react-router-dom";
 
 class App extends React.Component {
-// /* render() {
-//   return (
-//     <div>
-//      <Main/>
-//     </div>
-//   );
-//  }*/
-
  render() {
   return (
     <div id="app">
@@ -28,9 +20,7 @@ class App extends React.Component {
       </div>
      </Router>
     </div>
-
   );
  }
-
 }
 export default hot(module)(App);
