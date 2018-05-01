@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
 import { connect } from "react-redux";
 import { isAuth } from "../../actions";
+import {PATH} from "../../const"
 import './style.css';
 
 const mapDispatchToProps = dispatch => {
@@ -21,7 +22,7 @@ const ConnectedLogOut = withRouter(
         <button className="logOut"
         onClick={()=>{
             props.isAuth(false);
-            history.push("/login")}}>Sign Out</button>
+            history.push(PATH+"/login")}}>Sign Out</button>
         </div>
         ):
     null

@@ -1,6 +1,7 @@
 import React from "react";
 import {Route, Redirect} from "react-router-dom";
 import { connect } from "react-redux";
+import {PATH} from "../../const"
 
 
 const mapStateToProps = state => {
@@ -13,7 +14,7 @@ const ConnectedPrivateRoute = ({ component: Component,auth, ...rest}) => (
       ) : (
         <Redirect
           to={{
-            pathname: "/login",
+            pathname: PATH+"/login",
             state: { from: props.location }
           }}
         />

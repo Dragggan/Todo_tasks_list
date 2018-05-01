@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {isAuth} from "../../actions";
 import './style.css';
 import auth from '../../components/auth'
+import {PATH} from "../../const"
 
 
 
@@ -62,7 +63,7 @@ class ConnectedLogIn extends Component {
  render() {
   if(this.props.auth.isAuthenticated) {
    return <Redirect to={{
-    pathname: '/',
+    pathname: PATH+'/',
    }}
    />
   }
