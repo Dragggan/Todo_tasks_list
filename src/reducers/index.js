@@ -4,15 +4,8 @@ const initialState = {
   users:[],
   auth : {
   isAuthenticated: false,
-  authenticate(cb) {
-    this.isAuthenticated = true;
-    setTimeout(cb, 100); // fake async
-  },
-  signout(cb) {
-    this.isAuthenticated = false;
-    setTimeout(cb, 100);
-  }
 },
+
 admins:[{'id':1,
           'email':'djuza@djuza.com',
             'password':'djuza'},

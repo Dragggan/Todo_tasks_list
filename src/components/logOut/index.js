@@ -30,5 +30,5 @@ const ConnectedLogOut = withRouter(
 );
 
 const LogOut =connect(mapStateToProps,mapDispatchToProps)(ConnectedLogOut)
-export default withRouter(LogOut);
+export default withRouter(LogOut); //wrapping component with withRouter so it can be part of routing system
 

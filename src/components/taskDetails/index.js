@@ -102,5 +102,6 @@ this.setState({isCompleted:!this.state.isCompleted})
   return null
   }
 }
+
 const TaskDetails=connect(mapStateToProps,mapDispatchToProps)(ConnectedTaskDetails)
 export default TaskDetails;

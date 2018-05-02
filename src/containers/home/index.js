@@ -1,3 +1,5 @@
+//this component is fetching all the data from APIs
+
 import React, {Component} from 'react'
 import { connect } from "react-redux"; 
 
@@ -74,5 +76,5 @@ class ConnectedHome extends Component{
  }
 }
 
-const Home=connect(mapStateToProps,mapDispatchToProps)(ConnectedHome) //ovde moramo da
+const Home=connect(mapStateToProps,mapDispatchToProps)(ConnectedHome)
 export default Home

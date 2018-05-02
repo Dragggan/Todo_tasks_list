@@ -4,15 +4,16 @@ import ReactDOM from 'react-dom';
 
 import { connect } from "react-redux";
 import { chngUsers } from "../../actions";
-
 import './style.css';
 
+//defining which part of store will be changing by this component
 const mapDispatchToProps = dispatch => {
   return {
     chngUsers: list => dispatch(chngUsers(list)),
   };
 };
 
+//taking users from store to become part of props
 const mapStateToProps = state => {
   return { users: state.users };
 };
@@ -37,7 +38,7 @@ class ConnectedAssigneeDetails extends Component {
   }
 
   render() {
-    const requestedUser=this.props.users.filter(user=>user.id==this.props.id)[0];
+    const requestedUser=this.props.users.filter(user=>user.id==this.props.id)[0];//finding which user is clicked on
     if(requestedUser.showDetails){
     return ReactDOM.createPortal(
       <div className='modal2'>

@@ -11,7 +11,6 @@ import './style.css';
 
 
 class Main extends Component {
-
     render(){
         return (
          <div id="main">

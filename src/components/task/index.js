@@ -6,6 +6,7 @@ import { chngList, chngUsers } from "../../actions";
 import TaskDetails from "../taskDetails";
 import AssigneeDetails from "../assigneeDetails";
 
+//defining that todo list and users list from store will be changed by this component
 const mapDispatchToProps = dispatch => {
   return {
     chngList: list => dispatch(chngList(list)),
@@ -13,6 +14,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+//taking todo list and users list from store to become part of component props
 const mapStateToProps = state => {
   return { toDoList: state.toDoList,
             users:state.users };
@@ -28,8 +30,8 @@ constructor(props){
 
 deleteTask(){
     const isNotId=task=>task.id!==this.props.item.id;
-    const updatedList= this.props.toDoList.filter(isNotId)
-    this.props.chngList(updatedList);
+    const updatedList= this.props.toDoList.filter(isNotId)//filtering list to exclude clicked task
+    this.props.chngList(updatedList);//calling action that changes todo list
     console.log("ToDoItem#deleteTask")
 }
 

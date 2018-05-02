@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 import './style.css';
 import {addTask, chngId} from "../../actions"
 
-
-
 const mapDispatchToProps = dispatch => {
   return {
     addTask: task => dispatch(addTask(task)),
@@ -28,7 +26,7 @@ class ConnectedAddTask extends Component {
 
   addTask() {
     if (this.inputTask.value !== '' && this.props.users.length>0) {
-      var username=document.getElementById("assigneeSelect").value;
+      var username=document.getElementById("assigneeSelect").value;//aware that this not being recomended way of getting input value
       var selectedUser=this.props.users.filter(user=>user.username==username)[0];
       console.log(selectedUser);
       var id=this.props.idCounter+1;
@@ -44,7 +42,7 @@ class ConnectedAddTask extends Component {
       this.props.addTask(taskArray);
       this.props.chngId(id);
     }
-    //e.preventDefault();
+    //e.preventDefault()-seems to be unnecessary when button type is defined as "button"
   }
 
   render() {
