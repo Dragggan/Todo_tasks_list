@@ -1,16 +1,22 @@
 # Todo_tasks_list
 
-Added some changes
-
-# Project: To Do app
 
 # Scenario
 
-Admin goes to home page (127.0.0.1:8080). System redirects s/he  to the login page. Admin logs in by entering email and password. On successful log in Admin is redirected back to the home page. Note: for Admin login use some predefined email/password and check it on front end side only.
+Admin goes to home page (127.0.0.1:8080). System redirects them  to the login page. Admin logs in by entering email and password. On successful log in Admin is redirected back to the home page. <br>
+Note: If you want to test or browse our todo list app, use one of these predefined admin data:<br><br>
+email: djuza@djuza.com<br>
+password: djuza<br><br>
+email: ivana@ivana.com<br>
+password: ivana<br><br>
+email: rada@rada.com<br>
+password: rada<br><br>
 
-On the home page, Admin overviews the tasks list and selects one task to edit. On task edit page Admin modifies the task's assignee. Once changes are saved Admin is redirected back to the home page.
+On the home page, Admin overviews the tasks list and selects one task to edit. On task edit page Admin can modify the task assignee, task description and task status (completed/uncompleted). Once changes are saved Admin leaves task details window.
 
-On the home page, Admin adds new task and marks it as done.
+On the home page, Admin can also add new task. New task is by default set to be marked as uncompleted.
+
+On the task list, by clicking the task assignee, assignee details are presented to Admin.
 
 # Features
 
@@ -22,16 +28,23 @@ On the home page, Admin adds new task and marks it as done.
 - Mark task as done
 - User profile overview
 
-# RESTful API
-
-Use https://jsonplaceholder.typicode.com/todos (task list), https://jsonplaceholder.typicode.com/users (for list of assignees), https://jsonplaceholder.typicode.com/users/1 (for user profile) and https://jsonplaceholder.typicode.com/users/1/todos (for user profile) JSON Placeholder Fake RESTful API Endpoints.
 
 # Notes
 
-- Define what needs to be done and who is going to do it
-- Do daily sync on Slack (use Slack channel for framing the communication)
-- Commit early commit often
-- Take care about commit messages
-- Track development tasks in GitHub project
-- Make sure time for testing and bug fixing is planned from the start
-- Deploy final solution on GitHub Pages (use same repository - the final solution could be served from `docs` folder)
+- Todo list data as well as users data are retrieved from following APIs:<br>
+https://jsonplaceholder.typicode.com/todos<br>
+https://jsonplaceholder.typicode.com/users
+
+- The App was build using React.js library
+- All the data are stored in global storage using Redux framework
+- Page access was solved using React Router
+- Work environment was build using yarn package manager
+- Final production app was built using webpack
+- The final solution is served from `docs` folder on gitHub master branch
+
+# Enhancement/Wish List
+- User is informed if login data are incorrect
+- System recognizes which admin is currently logged in
+- List could be filtered by assignee and status
+- Assignee data could be edited
+- App comunicates with database through backend code (todo list data are saved for the next session)
