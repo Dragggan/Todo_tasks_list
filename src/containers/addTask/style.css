@@ -27,7 +27,7 @@
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid #dddddd;
-    background: transparent; 
+    background-color:#ffffff; 
     color: #3C3C3C; 
     cursor: pointer;
     font-family: "Gill Sans", system-ui;
@@ -35,7 +35,7 @@
 }
 
 #addTask{
-    margin-top: 10px;
+    padding-top: 10px;
     margin-left: 10px;
 }
 

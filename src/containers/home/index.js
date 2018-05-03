@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import AddTask from '../addTask'
 import TaskList from '../../components/TaskList'
 import { chngList, chngUsers,chngId } from "../../actions";
+import './style.css'
 
 const mapDispatchToProps = dispatch => {
  return {
@@ -68,7 +69,7 @@ class ConnectedHome extends Component{
 
  render(){
   return (
-    <div>
+    <div id="home">
      <AddTask/>
      <TaskList/>
     </div>
