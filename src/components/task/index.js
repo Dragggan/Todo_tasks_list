@@ -60,7 +60,7 @@ showUserDetails(){
       if(this.props.users.length>0){
         const selectedUser=this.props.users.filter(user=>user.id==this.props.item.userId)[0]
         return(
-          <div className="table-row">
+          <section className="table-row">
             <AssigneeDetails id={this.props.item.userId}/>
             <TaskDetails showDetails={this.props.item.showDetails} task={this.props.item}/>
             <div style={{width:'40%'}}> <div id="taskId" style={{width:'30px'}}>{this.props.item.id} </div> {this.props.item.title} </div>
@@ -68,7 +68,7 @@ showUserDetails(){
             <span style={{width:'150px'}} id="task-assignee" onClick={this.showUserDetails}> {selectedUser.username}</span>
             <input style={{width:'85px'}} type="submit"  value="Edit Task" onClick={this.showDetails} className="taskButton"/>
             <input style={{width:'85px'}} type="submit" onClick={this.deleteTask} value="Delete Task"  className="taskButton"/>
-          </div>
+          </section>
             )
     }
     return null

@@ -10,6 +10,7 @@
   cursor:pointer;
   
 
+
  }
 
 
@@ -40,6 +41,11 @@
   align-items: center;
   justify-content: space-between;
   }
+section.table-row:hover {
+  background-color: lightcyan;
+  color: #0d8aee;
+}
+
 
 .table-header > span { 
   overflow: hidden; 
