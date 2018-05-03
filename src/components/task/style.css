@@ -6,8 +6,10 @@
   text-align: center; 
 }
  #task-assignee:hover{
-  color:#2196f3;
+  color:white;
   cursor:pointer;
+   font-size: x-large;
+
   
 
 
@@ -42,8 +44,8 @@
   justify-content: space-between;
   }
 section.table-row:hover {
-  background-color: lightcyan;
-  color: #0d8aee;
+  background-color: #2196F3;
+  color: white;
 }
 
 

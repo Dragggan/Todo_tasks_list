@@ -64,7 +64,7 @@ showUserDetails(){
             <AssigneeDetails id={this.props.item.userId}/>
             <TaskDetails showDetails={this.props.item.showDetails} task={this.props.item}/>
             <div style={{width:'40%'}}> <div id="taskId" style={{width:'30px'}}>{this.props.item.id} </div> {this.props.item.title} </div>
-            <span style={{width:'150px'}} style={!this.props.item.completed?{fontWeight:'bold'}:{color:'#2196F3'}}> {this.props.item.completed? 'Yes ':'No '} </span>
+            <span style={{width:'150px'}} style={!this.props.item.completed?{fontWeight:'bold'}:{color:null}}> {this.props.item.completed? 'Yes ':'No '} </span>
             <span style={{width:'150px'}} id="task-assignee" onClick={this.showUserDetails}> {selectedUser.username}</span>
             <input style={{width:'85px'}} type="submit"  value="Edit Task" onClick={this.showDetails} className="taskButton"/>
             <input style={{width:'85px'}} type="submit" onClick={this.deleteTask} value="Delete Task"  className="taskButton"/>
