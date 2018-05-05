@@ -36,9 +36,17 @@ class ConnectedLogIn extends Component {
      return;
     }
     console.log("not valid email");
+
      this.inputPass.value = '';
       this.inputEmail.value = '';
+
    }
+if (this.props.isAuth(false)) {
+document.getElementById("notValidMail").innerHTML = `please type  a valid email and password, HINT: 
+EMAIL: rada@rada.com, and PASSWORD: rada`;
+
+
+}
   }
  
  render() {
@@ -78,6 +86,7 @@ class ConnectedLogIn extends Component {
               onClick={() => this.signUp()}>LogIn
             </button>
           </div>
+       <p id="notValidMail" style={{color:"red",textAlign:"center"}}></p>
       </div>
     </div>
   );
