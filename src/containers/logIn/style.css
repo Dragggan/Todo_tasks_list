@@ -160,3 +160,9 @@ hr {
   width: 25%;
   margin: 0px auto 45px auto;
 }
+
+#notValidMail{
+  color:#ff8671;
+  text-align: center;
+  font-family: "Gill Sans", system-ui
+}
